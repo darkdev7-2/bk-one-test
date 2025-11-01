@@ -1,0 +1,1856 @@
+{
+    "welcome": {
+        "title": "Welcome to",
+        "appName": "Digi Bank",
+        "tagline": "Banking made simple, secure, and seamless.",
+        "buttonText": "Get Start",
+        "exitDialog": {
+            "title": "Exit Application",
+            "message": "Are you sure you want to exit the application?"
+        }
+    },
+    "onboarding": {
+        "title": "Fund Transfer",
+        "subTitle": "Bank to bank fund transfer available also Swift and Wire",
+        "titleTwo": "Automatic Withdraw",
+        "subTitleTwo": "Admin can upload html template as a landing page and use his own design",
+        "titleThree": "Bank DPS",
+        "subTitleThree": "The application has the DPS system available on it",
+        "titleFour": "Bank FDR",
+        "subTitleFour": "The application has the FDR system available on it",
+        "skipButton": "Skip",
+        "nextButton": "Next"
+    },
+    "signIn": {
+        "noAccountText": "Don't have an account?",
+        "signUpButton": "Sign Up",
+        "welcomeText": "Welcome Back!",
+        "emailLabel": "Email Or Username",
+        "passwordLabel": "Password",
+        "forgotPassword": "Forget Password",
+        "signInButton": "Sign In",
+        "requiredMessage": "Please fill in this field",
+        "exitDialog": {
+            "title": "Exit Application",
+            "message": "Are you sure you want to exit the application?"
+        }
+    },
+    "forgotPassword": {
+        "title": "Password Reset",
+        "emailOrUsernameLabel": "Email Or Username",
+        "emailOrUsernameValidation": "Please fill out this field",
+        "resetPasswordButton": "Reset Password",
+        "dontHaveAccount": "Don't have an account?",
+        "signUp": "Sign Up",
+        "reset_password": {
+            "already_have_account": "Already have an account?",
+            "login_button": "Login",
+            "screen_title": "Reset Password",
+            "password": "Password",
+            "confirm_password": "Confirm Password",
+            "reset_button": "Reset",
+            "password_required": "Please fill in this field",
+            "confirm_password_required": "Please fill in this field"
+        }
+    },
+    "twoFa": {
+        "alreadyHaveAccount": "Already have an account?",
+        "login": "Login",
+        "title": "Verify Two FA",
+        "subtitle": "Enter code via google authenticator app",
+        "pinError": "Enter 6 digits",
+        "verifyButton": "Verify"
+    },
+    "pinCodeVerification": {
+        "alreadyHaveAccount": "Already have an account?",
+        "login": "Login",
+        "verifyOtp": "Verify OTP",
+        "codeSent": "Your code was sent to you via :email",
+        "enter6DigitsError": "Enter 6 digits",
+        "verifyButton": "Verify"
+    },
+    "signUp": {
+        "haveAccountText": "Already have an account?",
+        "loginButton": "Login",
+        "title": "Create an account",
+        "fields": {
+            "email": "Email",
+            "country": "Country",
+            "phone": "Phone",
+            "referralCode": "Referral Code",
+            "password": "Password"
+        },
+        "validation": {
+            "required": "Please fill out this field",
+            "phoneRequired": "The phone field is required"
+        },
+        "countrySheet": {
+            "title": "Select Country"
+        },
+        "nextButton": "Next Step",
+        "toast": {
+            "phoneRequired": "The phone field is required"
+        }
+    },
+    "finishUpAccount": {
+        "existingAccount": {
+            "text": "Already have an account?",
+            "loginButton": {
+                "text": "Login"
+            }
+        },
+        "mainContent": {
+            "title": "We're almost there!",
+            "form": {
+                "username": {
+                    "label": "Username",
+                    "validation": {
+                        "errorMessage": "Please fill out this field"
+                    }
+                },
+                "firstName": {
+                    "label": "First Name",
+                    "validation": {
+                        "errorMessage": "Please fill out this field"
+                    }
+                },
+                "lastName": {
+                    "label": "Last Name",
+                    "validation": {
+                        "errorMessage": "Please fill out this field"
+                    }
+                },
+                "gender": {
+                    "label": "Gender",
+                    "placeholder": "Select Gender",
+                    "option": {
+                        "male": "Male",
+                        "female": "Female",
+                        "others": "Others"
+                    },
+                    "validation": {
+                        "errorMessage": "Please fill out this field"
+                    }
+                },
+                "branch": {
+                    "label": "Branch",
+                    "placeholder": "Select Branch",
+                    "validation": {
+                        "errorMessage": "Please fill out this field"
+                    }
+                }
+            },
+            "termsAgreement": {
+                "text": "I agree with the? ",
+                "link": "Trams & Condition"
+            },
+            "submitButton": {
+                "text": "Finish up Account"
+            }
+        }
+    },
+    "congrats": {
+        "congratsMessage": "Congratulation! You have earned :amount by signing up.",
+        "buttonText": "Go to Dashboard"
+    },
+    "home": {
+        "exitDialog": {
+            "title": "Exit Application",
+            "message": "Are you sure you want to exit the application?"
+        },
+        "alertBox": {
+            "kycStatus": {
+                "unverified": {
+                    "title": "Need to submit your information"
+                },
+                "pending": {
+                    "title": "You have submitted your documents and it is awaiting for the approval"
+                },
+                "buttonText": "Submit Now"
+            }
+        },
+        "cardSlider": {
+            "walletName": ":name",
+            "acName": "A/C",
+            "addMoney": "Add Money",
+            "transfer": "Transfer",
+            "accountCopyMessage": "Copied"
+        },
+        "summery": {
+            "dpsTitle": "My DPS",
+            "fdrTitle": "My FDR",
+            "loanTitle": "My Loan",
+            "summaryTitleDps": "Running Dps Summary",
+            "summaryTitleFdr": "Running Fdr Summary",
+            "summaryTitleLoan": "Running Loan Summary",
+            "endDateLabel": "End Date:",
+            "noDataMessage": "No summary found"
+        },
+        "quickAccess": {
+            "depositTitle": "Deposit",
+            "walletTitle": "Wallet",
+            "virtualCardTitle": "Virtual Card",
+            "transferTitle": "Transfer"
+        },
+        "transactionOverview": {
+            "cards": {
+                "allTransactions": {
+                    "title": "All Transactions"
+                },
+                "totalDeposit": {
+                    "title": "Total Deposit"
+                },
+                "totalTransfer": {
+                    "title": "Total Transfer"
+                },
+                "more": {
+                    "title": "More"
+                }
+            }
+        },
+        "recentTransactions": {
+            "title": "Recent Transactions",
+            "see_all": "See all",
+            "no_data": "No recent transaction history found",
+            "dialog": {
+                "time": "Time",
+                "transactionId": "Transaction ID",
+                "amount": "Amount",
+                "charge": "Charge",
+                "status": "Status",
+                "method": "Method",
+                "closeButtonText": "Close"
+            }
+        },
+        "all_statistics": {
+            "title": "All Statistics",
+            "items": {
+                "all_transactions": "All Transactions",
+                "total_deposit": "Total Deposit",
+                "total_transfer": "Total Transfer",
+                "total_pay_bill": "Total Pay Bill",
+                "referral_bonus": "Referral Bonus",
+                "total_dps": "Total DPS",
+                "total_fdr": "Total FDR",
+                "total_loan": "Total Loan",
+                "deposit_bonus": "Deposit Bonus",
+                "total_referral": "Total Referral",
+                "total_withdraw": "Total Withdraw",
+                "total_ticket": "Total Ticket"
+            }
+        },
+        "drawer": {
+            "title": "Navigations"
+        },
+        "end_drawer": {
+            "menu_items": {
+                "profile_settings": "Profile Settings",
+                "change_password": "Change Password",
+                "two_fa": "Security Settings",
+                "id_verification": {
+                    "title": "ID Verification",
+                    "status": {
+                        "approved": "Approved",
+                        "pending": "Pending",
+                        "submit": "Submit Now"
+                    }
+                },
+                "notifications": "All Notification",
+                "help_support": "Help & Support"
+            },
+            "language": {
+                "title": "Language",
+                "select_language": "Select Language"
+            },
+            "logOut": "Logout"
+        }
+    },
+    "deposit": {
+        "title": "Add Money",
+        "wallet": {
+            "label": "Wallet",
+            "hint": "Select Wallet",
+            "select_title": "Select Wallet"
+        },
+        "gateway": {
+            "label": "Gateway",
+            "hint": "Select Gateway",
+            "select_title": "Select Gateway",
+            "charge": "Charge"
+        },
+        "amount": {
+            "label": "Enter Amount",
+            "limit": "Minimum :min_range and Maximum :max_range"
+        },
+        "imagePicker": {
+            "selectImageSource": "Select Image Source",
+            "camera": "Camera",
+            "gallery": "Gallery"
+        },
+        "review": {
+            "title": "Review Details:",
+            "amount": {
+                "label": "Amount:"
+            },
+            "charge": {
+                "label": "Charge:"
+            },
+            "paymentMethod": {
+                "label": "Payment Method:"
+            },
+            "paymentMethodLogo": {
+                "label": "Payment Method Logo:"
+            },
+            "conversionRate": {
+                "label": "Convention Rate:"
+            },
+            "total": {
+                "label": "Total:"
+            },
+            "payable": {
+                "label": "Payable Amount:"
+            }
+        },
+        "button": {
+            "proceed": "Proceed to Payment"
+        },
+        "deposit_history": {
+            "title": "Deposit History",
+            "transactionHint": "Transaction ID",
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "no_data": {
+                "message": "No deposit history found"
+            },
+            "dialog": {
+                "details": {
+                    "time": "Time",
+                    "transaction_id": "Transaction ID",
+                    "amount": "Amount",
+                    "charge": "Charge",
+                    "status": "Status",
+                    "method": "Method"
+                },
+                "button": {
+                    "close": "Close"
+                }
+            }
+        },
+        "deposit_pending": {
+            "depositPendingText": "Deposit Pending",
+            "description": "The amount has been Pending added into your account",
+            "transactionId": "Transaction ID",
+            "depositAgainButtonText": "Deposit Again"
+        }
+    },
+    "wallet": {
+        "title": "Wallets",
+        "no_data": {
+            "message": "No wallet found"
+        },
+        "list": {
+            "walletName": ":name",
+            "acName": "A/C",
+            "copied": "Copied",
+            "buttons": {
+                "add_money": "Add Money",
+                "transfer": "Transfer"
+            }
+        },
+        "delete": {
+            "popup": {
+                "title": "Are you sure?",
+                "message": "You want to delete this wallet?",
+                "buttons": {
+                    "close": "Close",
+                    "confirm": "Yes,delete now"
+                }
+            }
+        },
+        "create_wallet": {
+            "title": "Create New Wallet",
+            "currency": {
+                "label": "Currency",
+                "hint": "Select Wallet",
+                "select_title": "Select Currency"
+            },
+            "button": {
+                "create": "Create New"
+            }
+        }
+    },
+    "virtualCard": {
+        "title": "Virtual Cards",
+        "no_data": {
+            "message": "No virtual card found"
+        },
+        "card": {
+            "expiry": {
+                "label": "Expiry Date"
+            },
+            "cvc": {
+                "label": "CVC"
+            }
+        },
+        "button": {
+            "create": "Create a new card"
+        },
+        "create_card": {
+            "title": "Create a new card",
+            "provider": {
+                "label": "Choose Card Provider",
+                "hint": "Select Card Provider",
+                "select_title": "Select Card Provider"
+            },
+            "holder": {
+                "tabs": {
+                    "existing": "Existing Cardholders",
+                    "new": "Create Cardholder"
+                },
+                "cardHolder": {
+                    "label": "Choose Card Holder",
+                    "hint": "Select Card Holder",
+                    "select_title": "Select Card Holder"
+                },
+                "newCardHolder": {
+                    "personal": {
+                        "name": {
+                            "label": "Name"
+                        },
+                        "email": {
+                            "label": "Email"
+                        },
+                        "phone": {
+                            "label": "Phone Number"
+                        }
+                    },
+                    "address": {
+                        "country": {
+                            "label": "Country",
+                            "hint": "Select Country",
+                            "select_title": "Select Country",
+                            "search": {
+                                "hint": "Search"
+                            }
+                        },
+                        "city": {
+                            "label": "City"
+                        },
+                        "state": {
+                            "label": "State"
+                        },
+                        "postal_code": {
+                            "label": "Postal Code"
+                        },
+                        "street": {
+                            "label": "Address"
+                        }
+                    }
+                }
+            },
+            "button": {
+                "create": "Create Now"
+            }
+        },
+        "card_details": {
+            "title": "Card Details",
+            "card": {
+                "expiry": {
+                    "label": "Expiry Date"
+                },
+                "cvc": {
+                    "label": "CVC"
+                }
+            },
+            "info": {
+                "type": {
+                    "label": "Card Type"
+                },
+                "created": {
+                    "label": "Card Created"
+                },
+                "currency": {
+                    "label": "Card Currency"
+                },
+                "billing": {
+                    "label": "Billing Address"
+                },
+                "spending": {
+                    "label": "Spending Limit"
+                }
+            },
+            "button": {
+                "status": {
+                    "activate": "Activate",
+                    "deactivate": "Deactivate"
+                },
+                "add_balance": "Add card Balance"
+            }
+        },
+        "card_topup": {
+            "title": "Card Balance Top Up",
+            "balance": {
+                "title": "My Balance",
+                "default_account": {
+                    "label": "Default Account:"
+                }
+            },
+            "amount": {
+                "label": "Amount",
+                "limit": {
+                    "message": "Minimum :min_range and Maximum :max_range"
+                },
+                "error": {
+                    "empty": "Fill up amount field"
+                }
+            },
+            "button": {
+                "topup": "Topup Now"
+            }
+        },
+        "card_transactions": {
+            "title": "Card Transactions",
+            "header": {
+                "sync": "Sync Now"
+            },
+            "no_data": {
+                "message": "No transaction history found"
+            },
+            "transaction": {
+                "status": {
+                    "success": "Success",
+                    "pending": "Pending",
+                    "failed": "Failed"
+                }
+            }
+        }
+    },
+    "fundTransfer": {
+        "appBar": {
+            "title": {
+                "fundTransfer": "Fund Transfer",
+                "beneficiaryList": "Beneficiary List",
+                "wireTransfer": "Wire Transfer"
+            }
+        },
+        "tabBar": {
+            "transfer": "Transfer",
+            "beneficiaries": "Beneficiary",
+            "wireTransfer": "Wire Transfer"
+        },
+        "dialogs": {
+            "newBeneficiary": {
+                "title": "Add New Beneficiary"
+            },
+            "wireTransferLimit": {
+                "title": "Wire Transfer Limit"
+            }
+        },
+        "transfer": {
+            "labels": {
+                "selectBank": "Select Bank",
+                "selectBeneficiary": "Select Beneficiary",
+                "selectWallet": "Select Wallet",
+                "accountNumber": "Account Number",
+                "enterAmount": "Enter Amount",
+                "nameOnAccount": "Name on account",
+                "branchName": "Branch Name",
+                "purposeOfTransfer": "Purpose of transfer (Optional)",
+                "transferReviewDetails": "Transfer Review Details:",
+                "amount": "Amount:",
+                "charge": "Charge:",
+                "bankName": "Bank Name:",
+                "total": "Total:",
+                "transferableAmount": "Transferable Amount:"
+            },
+            "button": {
+                "submit": "Transfer the fund"
+            },
+            "placeholders": {
+                "selectBank": "Select Bank",
+                "selectBeneficiary": "Select Beneficiary",
+                "selectWallet": "Select Wallet",
+                "accountNumber": "Enter account number",
+                "nameOnAccount": "Enter account holder name",
+                "branchName": "Enter branch name",
+                "purposeOfTransfer": "State your purpose"
+            },
+            "validators": {
+                "fieldRequired": "Please fill out this field."
+            },
+            "info": {
+                "chargePercentage": "Charge",
+                "minMaxAmount": "Minimum :min_range and Maximum :max_range"
+            }
+        },
+        "beneficiaryList": {
+            "noData": {
+                "message": "No beneficiary history found"
+            },
+            "labels": {
+                "branch": "Branch:",
+                "acName": "A/C:"
+            },
+            "actions": {
+                "details": "Details",
+                "edit": "Edit",
+                "delete": "Delete",
+                "sendMoney": "Send Money"
+            },
+            "popupMenu": {
+                "details": "View beneficiary details",
+                "edit": "Edit beneficiary",
+                "delete": "Delete beneficiary"
+            },
+            "beneficiaryDetails": {
+                "title": "Beneficiary Details",
+                "labels": {
+                    "bankName": "Bank Name",
+                    "accountNumber": "Account Number",
+                    "accountName": "Name on Account",
+                    "branchName": "Branch Name",
+                    "nickName": "Nick Name",
+                    "dailyLimit": "Daily Limit",
+                    "monthlyLimit": "Monthly Limit",
+                    "chargePerTransfer": "Charge Per Transfer"
+                },
+                "values": {
+                    "maxLimit": "Max"
+                },
+                "buttons": {
+                    "close": "Close"
+                }
+            },
+            "editBeneficiary": {
+                "title": "Edit Beneficiary",
+                "fields": {
+                    "selectBank": "Select Bank",
+                    "accountNumber": "Account Number",
+                    "accountName": "Name on Account",
+                    "branchName": "Branch Name",
+                    "nickName": "Nick Name"
+                },
+                "validation": {
+                    "required": "Please fill out this field."
+                },
+                "buttons": {
+                    "save": "Save Change",
+                    "close": "Close"
+                }
+            },
+            "deleteBeneficiary": {
+                "title": "Are you sure?",
+                "message": "You want to delete this beneficiary?",
+                "buttons": {
+                    "cancel": "Cancel",
+                    "confirm": "Confirm"
+                }
+            }
+        },
+        "wireTransfer": {
+            "form": {
+                "enterAmount": "Enter Amount",
+                "minMaxNote": "Minimum :min_range and Maximum :max_range",
+                "amountRequiredToast": "Please fill up amount field!",
+                "fieldRequired": "Please enter :field_name"
+            },
+            "button": {
+                "submit": "Transfer the fund"
+            }
+        },
+        "transferHistory": {
+            "title": "Transfer History",
+            "noData": "No transfer history found",
+            "search": {
+                "transactionId": "Transaction ID"
+            },
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "transaction": {
+                "time": "Time",
+                "transactionId": "Transaction ID",
+                "amount": "Amount",
+                "charge": "Charge",
+                "status": "Status",
+                "method": "Method",
+                "close": "Close It"
+            }
+        },
+        "addBeneficiary": {
+            "title": "Add New Beneficiary",
+            "fields": {
+                "selectBank": "Select Bank",
+                "accountNumber": "Account Number",
+                "accountName": "Name on Account",
+                "branchName": "Branch Name",
+                "nickName": "Nick Name"
+            },
+            "validation": {
+                "required": "Please fill out this field."
+            },
+            "buttons": {
+                "add": "Add New",
+                "close": "Close"
+            }
+        },
+        "wireTransferLimit": {
+            "title": "Wire Transfer Limit",
+            "limits": {
+                "minPerTransaction": "Min. per transaction",
+                "maxPerTransaction": "Max. per transaction",
+                "dailyMaxTransfer": "Daily Max. transfer",
+                "monthlyMaxTransfer": "Monthly Max. transfer",
+                "dailyTransactionLimit": "Daily transactions limit",
+                "monthlyTransactionLimit": "Monthly transactions limit",
+                "perTransactionFee": "Per transaction fee"
+            },
+            "buttons": {
+                "gotIt": "Got It"
+            }
+        },
+        "transferSuccess": {
+            "accountNumberText": "The amount is sent to",
+            "transactionId": "Transaction ID",
+            "transferAgain": "Transfer Again"
+        }
+    },
+    "dpsPlan": {
+        "title": "DPS Plans",
+        "noData": "No dps plan found",
+        "buttons": {
+            "subscribe": "Subscribe Now"
+        },
+        "fields": {
+            "perInstallment": "Per Installment",
+            "interestRate": "Interest Rate",
+            "totalInstallments": "Number of Installments",
+            "totalDeposit": "All you pay",
+            "totalMatureAmount": "You will get",
+            "maturityFee": "Maturity Fee",
+            "increase": "Increase",
+            "increaseCharge": "Increase Charge",
+            "cancelFee": "Cancel Fee",
+            "cancelIn": "Cancel In",
+            "increaseLimit": "Increase Limit",
+            "minIncreaseAmount": "Min Increase Amount",
+            "maxIncreaseAmount": "Max Increase Amount",
+            "decrease": "Decrease",
+            "decreaseCharge": "Decrease Charge",
+            "decreaseLimit": "Decrease Limit",
+            "minDecreaseAmount": "Min Decrease Amount",
+            "maxDecreaseAmount": "Max Decrease Amount"
+        },
+        "yes": "Yes",
+        "no": "No",
+        "dpsPlanList": {
+            "title": "My DPS List",
+            "fields": {
+                "dpsId": "DPS ID"
+            },
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "status": {
+                "running": "Running",
+                "due": "Due",
+                "closed": "Closed",
+                "mature": "Mature"
+            },
+            "table": {
+                "noData": "No dps plan history found"
+            },
+            "buttons": {
+                "view": "View",
+                "cancel": "Cancel"
+            },
+            "dialog": {
+                "cancelConfirmTitle": "Are your sure?",
+                "cancelConfirmMessage": "You want to cancel this DPS?",
+                "confirm": "Yes, Cancel it",
+                "close": "Close"
+            },
+            "dpsDetails": {
+                "title": "DPS Details",
+                "fields": {
+                    "planName": "Plan Name",
+                    "dpsId": "DPS ID",
+                    "status": "Status",
+                    "interestRate": "Interest Rate",
+                    "perInstallment": "Per Installment",
+                    "everyText": "Every",
+                    "daysText": "Days",
+                    "dayText": "Day",
+                    "timesText": "Times",
+                    "totalInstallments": "Number of Installments",
+                    "givenInstallments": "Given Installments",
+                    "nextInstallment": "Next Installment",
+                    "defermentCharge": "Deferment Charge",
+                    "defermentFormat": ":amount / :days :until",
+                    "profitAmount": "Profit Amount",
+                    "maturedAmount": "Matured Amount"
+                },
+                "actions": {
+                    "increase": "Increase",
+                    "decrease": "Decrease"
+                },
+                "status": {
+                    "running": "Running",
+                    "due": "Due",
+                    "closed": "Closed",
+                    "mature": "Mature"
+                },
+                "buttons": {
+                    "installments": "Installments"
+                },
+                "dpsIncrease": {
+                    "title": "DPS Increase",
+                    "currentInstallment": "Current Per Installment Fee:",
+                    "fields": {
+                        "increaseAmount": "Increase Amount",
+                        "minMaxValidation": "Minimum :min_range and Maximum :max_range"
+                    },
+                    "buttons": {
+                        "submit": "Submit",
+                        "close": "Close"
+                    }
+                },
+                "dpsDecrease": {
+                    "title": "DPS Decrease",
+                    "currentInstallment": "Current Per Installment Fee:",
+                    "fields": {
+                        "decreaseAmount": "Decrease Amount",
+                        "minMaxValidation": "Minimum :min_range and Maximum :max_range"
+                    },
+                    "buttons": {
+                        "submit": "Submit",
+                        "close": "Close"
+                    }
+                }
+            },
+            "installments": {
+                "title": "Installments List",
+                "summary": {
+                    "total": "Total Installments",
+                    "paid": "Paid Installments"
+                },
+                "list": {
+                    "installmentDate": "Installment Date",
+                    "status": {
+                        "paid": "Paid",
+                        "pending": "Pending",
+                        "yetToPay": "Yet to pay"
+                    },
+                    "paymentDate": "Payment Date",
+                    "amount": "Amount"
+                },
+                "details": {
+                    "installment": "Installment",
+                    "details": "Details",
+                    "statusPaid": "Payment Complete",
+                    "statusPending": "Payment Pending",
+                    "installmentDate": "Installment Date",
+                    "status": "Payment Status",
+                    "amount": "Amount",
+                    "paymentDate": "Payment Date",
+                    "defermentDays": "Deferment Days",
+                    "charge": "Charge",
+                    "close": "Close"
+                },
+                "noData": "No dps installment history found"
+            }
+        }
+    },
+    "fdrPlan": {
+        "title": "FDR Plans",
+        "noData": "No fdr plan found",
+        "fields": {
+            "lockInPeriod": "Lock In Period",
+            "profitInterval": "Get Profit Every",
+            "profitRate": "Profit Rate",
+            "minFdr": "Minimum FDR",
+            "maxFdr": "Maximum FDR",
+            "compounding": "Compounding",
+            "cancelIn": "Cancel In",
+            "cancelFee": "Cancel Fee",
+            "maturityFee": "Maturity Fee",
+            "increase": "Increase",
+            "increaseCharge": "Increase Charge",
+            "increaseLimit": "Increase Limit",
+            "minIncrease": "Min Increase Amount",
+            "maxIncrease": "Max Increase Amount",
+            "decrease": "Decrease",
+            "decreaseCharge": "Decrease Charge",
+            "decreaseLimit": "Decrease Limit",
+            "minDecrease": "Min Decrease Amount",
+            "maxDecrease": "Max Decrease Amount",
+            "yesText": "Yes",
+            "noText": "No"
+        },
+        "buttons": {
+            "subscribeNow": "Subscribe Now"
+        },
+        "fdrSubscribe": {
+            "title": "Starters",
+            "fields": {
+                "enterAmount": "Enter Amount",
+                "amountRange": "Minimum :min_range and Maximum :max_range"
+            },
+            "buttons": {
+                "applyNow": "Apply Now"
+            }
+        },
+        "fdrPlanList": {
+            "title": "My FDR List",
+            "fields": {
+                "fdrId": "FDR ID"
+            },
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "status": {
+                "running": "Running",
+                "completed": "Completed",
+                "closed": "Closed"
+            },
+            "noData": "No fdr plan history found",
+            "dialog": {
+                "cancelTitle": "Are your sure?",
+                "cancelMessage": "You want to cancel this FDR?",
+                "confirm": "Yes, cancel it",
+                "cancel": "No, keep it"
+            },
+            "buttons": {
+                "tryAgain": "Try Again",
+                "loadMore": "Load More",
+                "view": "View",
+                "cancel": "Cancel"
+            },
+            "fdrDetails": {
+                "title": "FDR Details",
+                "fields": {
+                    "planName": "Plan Name",
+                    "fdrId": "FDR ID",
+                    "status": "Status",
+                    "amount": "Amount",
+                    "profit": "Profit",
+                    "totalReturns": "Total Returns",
+                    "returnReceive": "Return Receive",
+                    "nextReceive": "Next Receive",
+                    "totalProfit": "Total Profit"
+                },
+                "status": {
+                    "running": "Running",
+                    "completed": "Completed",
+                    "closed": "Closed"
+                },
+                "buttons": {
+                    "increase": "Increase",
+                    "decrease": "Decrease"
+                },
+                "fdrIncrease": {
+                    "title": "FDR Increase",
+                    "increaseAmount": "Increase Amount",
+                    "amountLimits": "Minimum :min_amount and Maximum :max_amount",
+                    "submit": "Submit",
+                    "close": "Close"
+                },
+                "fdrDecrease": {
+                    "title": "FDR Decrease",
+                    "decreaseAmount": "Decrease Amount",
+                    "amountLimits": "Minimum :min_amount and Maximum :max_amount",
+                    "submit": "Submit",
+                    "close": "Close"
+                }
+            },
+            "fdrInstallment": {
+                "title": "Installments List",
+                "summary": {
+                    "totalInstallments": "Total Installments",
+                    "paidInstallments": "Paid Installments"
+                },
+                "noDataMessage": "No fdr installment history found",
+                "status": {
+                    "paid": "Paid",
+                    "pending": "Pending"
+                },
+                "details": {
+                    "installmentText": "Installment",
+                    "detailsText": "Details",
+                    "paymentComplete": "Payment Complete",
+                    "paymentPending": "Payment Pending",
+                    "fields": {
+                        "interest": "Interest",
+                        "returnDate": "Return Date",
+                        "paidAmount": "Paid Amount",
+                        "paymentDate": "Payment Date",
+                        "none": "None"
+                    },
+                    "close": "Close"
+                }
+            }
+        }
+    },
+    "loanPlan": {
+        "title": "Loan Plans",
+        "noDataMessage": "No loan plans found",
+        "details": {
+            "applyLoan": "Apply Loan",
+            "fields": {
+                "minimumLoan": "Minimum Loan",
+                "maximumLoan": "Maximum Loan",
+                "installmentRate": "Interest Rate",
+                "installmentSlice": "Installment Slice",
+                "totalInstallment": "Total Installment",
+                "loanApplyFee": "Loan Apply Fee"
+            }
+        },
+        "applyLoan": {
+            "title": "Education Loan",
+            "form": {
+                "amountLabel": "Enter Amount",
+                "amountLimits": "Minimum :min_amount and Maximum :max_amount",
+                "applyNow": "Apply Now"
+            },
+            "errors": {
+                "invalidAmount": "Please enter a valid amount",
+                "belowMinimum": "Amount must be at least",
+                "aboveMaximum": "Amount cannot exceed"
+            }
+        },
+        "loanInstructions": {
+            "appBarTitle": "Loan Instructions",
+            "contentOne": {
+                "title": "Loan Instructions"
+            },
+            "contentTwo": {
+                "title": "Application For :loan_name",
+                "contentTable": {
+                    "contentKeyOne": "Plan Name:",
+                    "contentKeyTwo": "Loan Amount:",
+                    "contentKeyThree": "Total Installments:",
+                    "contentKeyFour": "Per Installment:",
+                    "contentKeyFive": "Interest Amount:",
+                    "contentKeySix": "Total Payable Amount:"
+                }
+            }
+        },
+        "loanApplication": {
+            "title": "Application Form",
+            "imageUpload": {
+                "title": "Select Image Source",
+                "camera": "Camera",
+                "gallery": "Gallery"
+            },
+            "buttons": {
+                "applyNow": "Apply Now"
+            },
+            "validation": {
+                "fieldRequired": ":field_name is required",
+                "selectField": "Please select :field_name"
+            },
+            "form": {
+                "select": {
+                    "placeholder": "Select :field_name"
+                },
+                "bottomSheet": {
+                    "title": "Select :field_name"
+                }
+            }
+        },
+        "loanPlanList": {
+            "title": "My Loan List",
+            "form": {
+                "loanId": "Loan ID"
+            },
+            "noDataMessage": "No loan plan history found",
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "status": {
+                "running": "Running",
+                "due": "Due",
+                "cancelled": "Cancelled",
+                "completed": "Completed",
+                "reviewing": "Reviewing",
+                "rejected": "Rejected"
+            },
+            "cancelLoan": {
+                "title": "Are your sure?",
+                "message": "You want to cancel this Loan?"
+            },
+            "buttons": {
+                "tryAgain": "Try Again",
+                "confirm": "Confirm",
+                "cancel": "Cancel"
+            },
+            "loanDetails": {
+                "title": "Loan Details",
+                "noDataMessage": "No loan details found",
+                "status": {
+                    "running": "Running",
+                    "due": "Due",
+                    "cancelled": "Cancelled",
+                    "completed": "Completed",
+                    "reviewing": "Reviewing",
+                    "rejected": "Rejected"
+                },
+                "fields": {
+                    "planName": "Plan Name",
+                    "loanId": "Loan ID",
+                    "status": "Status",
+                    "amount": "Amount",
+                    "perInstallment": "Per Installment",
+                    "everyText": "Every",
+                    "numberOfInstallments": "Number of Installments",
+                    "givenInstallments": "Given Installments",
+                    "nextInstallment": "Next Installment",
+                    "defermentCharge": "Deferment Charge",
+                    "defermentFormat": ":change / :days",
+                    "totalPayableAmount": "Total Payable Amount"
+                }
+            }
+        },
+        "loanInstallmentList": {
+            "appBarTitle": "Installments List",
+            "infoCards": {
+                "totalInstallments": "Total Installments",
+                "paidInstallments": "Paid Installments"
+            },
+            "sectionTitle": "Installment List",
+            "payAllButton": {
+                "text": "All Installment Pay",
+                "iconTooltip": "Pay all installments"
+            },
+            "listItems": {
+                "installmentDate": "Installment Date:",
+                "status": {
+                    "paid": "Paid",
+                    "pending": "Pending",
+                    "yetToPay": "Yet to pay"
+                },
+                "payButton": "Pay Installment",
+                "paymentDate": "Payment Date:"
+            },
+            "noData": {
+                "message": "No loan installment history found"
+            },
+            "dialogs": {
+                "paymentConfirmation": {
+                    "title": "Are you sure?",
+                    "message": "You want to pay loan installment?",
+                    "confirm": "Confirm",
+                    "cancel": "Cancel"
+                }
+            },
+            "detailsSheet": {
+                "installmentText": "Installment",
+                "detailsText": "Details",
+                "status": {
+                    "paid": "Payment Complete",
+                    "pending": "Payment Pending"
+                },
+                "rows": {
+                    "installmentDate": "Installment Date",
+                    "paymentStatus": "Payment Status",
+                    "amount": "Amount",
+                    "givenDate": "Given Date",
+                    "defermentDays": "Deferment Days",
+                    "charge": "Charge"
+                },
+                "closeButton": "Close"
+            }
+        }
+    },
+    "payBill": {
+        "title": "Pay Bill",
+        "airtime": "Airtime",
+        "electricity": "Electricity",
+        "internet": "Internet",
+        "dataBundle": "Data Bundle",
+        "cables": "Cables",
+        "toll": "Toll",
+        "airtimeSection": {
+            "title": "Airtime",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "success": {
+                "paymentSuccessful": "Payment successful!"
+            },
+            "transactionCompleted": "Your transaction has been completed.",
+            "tryAgainButton": "Try Again",
+            "cancel": "Cancel"
+        },
+        "electricitySection": {
+            "title": "Electricity",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "success": {
+                "paymentSuccessful": "Electricity payment successful!"
+            },
+            "dropdowns": {
+                "selectCountry": "Select Country",
+                "selectService": "Select Service",
+                "selectProvider": "Select Utility Provider"
+            }
+        },
+        "internetSection": {
+            "title": "Internet",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "success": {
+                "paymentSuccessful": "Internet payment successful!",
+                "transactionCompleted": "Your internet payment has been processed."
+            },
+            "dropdowns": {
+                "selectCountry": "Select Country",
+                "selectService": "Select Service"
+            }
+        },
+        "dataBundleSection": {
+            "title": "Data Bundle",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "success": {
+                "paymentSuccessful": "Data bundle purchase successful!",
+                "transactionCompleted": "Your data bundle has been activated."
+            },
+            "dropdowns": {
+                "selectCountry": "Select Country",
+                "selectService": "Select Service",
+                "selectNetwork": "Select Network Provider",
+                "selectPlan": "Select Data Plan"
+            }
+        },
+        "cablesSection": {
+            "title": "Cables TV",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "dropdowns": {
+                "selectCountry": "Select Country",
+                "selectService": "Select Service"
+            }
+        },
+        "tollSection": {
+            "title": "Toll",
+            "countries": "Countries",
+            "services": "Services",
+            "amount": "Amount",
+            "selectCountry": "Select Country",
+            "selectService": "Select Service",
+            "paymentDetails": "Payment Details",
+            "charge": "Charge",
+            "conversionRate": "Conversion Rate",
+            "payableAmount": "Payable Amount",
+            "submit": "Submit",
+            "common": {
+                "requiredField": "This field is required",
+                "requiredField2": "Fill up all required fields"
+            },
+            "errors": {
+                "countryNotSelected": "Please select a country",
+                "serviceNotSelected": "Please select a service",
+                "amountNotValid": "Please enter a valid amount",
+                "fieldRequired": "This field is required"
+            },
+            "success": {
+                "paymentSuccessful": "Toll payment successful!",
+                "transactionCompleted": "Your toll payment has been processed."
+            }
+        },
+        "billPaymentHistory": {
+            "title": "Bill Payments",
+            "noDataFound": "No bill payment history found",
+            "transactionItem": {
+                "charge": "Charge",
+                "status": "Status"
+            },
+            "dialog": {
+                "title": "Bill Details",
+                "time": "Time",
+                "amount": "Amount",
+                "charge": "Charge",
+                "method": "Method",
+                "status": "Status",
+                "closeButton": "Close It"
+            }
+        }
+    },
+    "transactions": {
+        "title": "Transactions",
+        "noDataFound": "No transaction history found",
+        "transactionId": "Transaction ID",
+        "filterDialog": {
+            "filterText": "Filters",
+            "typeText": "Type",
+            "selectTypeText": "Select Type",
+            "dateLabel": "Date",
+            "dateRange": "Select Date Range",
+            "dateRangeCancelButtonText": "Cancel",
+            "dateRangeApplyButtonText": "Apply",
+            "resetButtonText": "Reset",
+            "searchButtonText": "Search"
+        },
+        "dialog": {
+            "time": "Time",
+            "transactionId": "Transaction ID",
+            "amount": "Amount",
+            "charge": "Charge",
+            "status": "Status",
+            "method": "Method",
+            "closeButton": "Close"
+        }
+    },
+    "withdraw": {
+        "title": "Withdraw Money",
+        "account": "Account",
+        "selectAccount": "Select Account",
+        "enterAmount": "Enter Amount",
+        "preview": "Preview",
+        "amount": "Amount",
+        "charge": "Charge",
+        "paymentMethod": "Payment Method",
+        "paymentMethodLogo": "Payment Method Logo",
+        "conversionRate": "Conversion Rate",
+        "total": "Total",
+        "withdrawButton": "Withdraw Money",
+        "methodTypes": {
+            "auto": "This Is Automatic Method",
+            "manual": "Process Time:"
+        },
+        "limits": "Minimum :min_limit and Maximum :max_limit",
+        "common": {
+            "requiredField": "This field is required"
+        },
+        "validation": {
+            "requiredField": "Fill up all required fields",
+            "invalidAmount": "Please enter a valid amount",
+            "minWithdraw": "Minimum withdrawal is :min_amount",
+            "maxWithdraw": "Maximum withdrawal is :max_amount"
+        },
+        "withdrawAccount": {
+            "title": "Withdraw Account",
+            "noAccountFound": "No account found",
+            "account": "Account"
+        },
+        "addWithdrawAccount": {
+            "title": "Add New Withdraw Account",
+            "gateway": "Gateway",
+            "selectGateway": "Select Gateway",
+            "methodName": "Method Name",
+            "addButton": "Add New Withdraw Account",
+            "imageSource": {
+                "title": "Select Image Source",
+                "camera": "Camera",
+                "gallery": "Gallery"
+            },
+            "validation": {
+                "required": ":field_name is required"
+            }
+        },
+        "editWithdrawAccount": {
+            "title": "Edit Withdraw Account",
+            "methodName": "Method Name",
+            "updateButton": "Update",
+            "fileUpload": {
+                "placeholder": "Upload :field_name",
+                "uploadIcon": "Upload"
+            },
+            "common": {
+                "close": "Close",
+                "attach": "Attach File"
+            }
+        },
+        "withdrawHistory": {
+            "title": "Withdraw History",
+            "noDataFound": "No withdraw history found",
+            "transactionId": "Transaction ID",
+            "filterDialog": {
+                "filterText": "Filters",
+                "dateLabel": "Date",
+                "dateRange": "Select Date Range",
+                "dateRangeCancelButtonText": "Cancel",
+                "dateRangeApplyButtonText": "Apply",
+                "resetButtonText": "Reset",
+                "searchButtonText": "Search"
+            },
+            "dialog": {
+                "time": "Time",
+                "transactionId": "Transaction ID",
+                "amount": "Amount",
+                "charge": "Charge",
+                "status": "Status",
+                "method": "Method",
+                "closeButton": "Close"
+            },
+            "status": {
+                "success": "Success",
+                "failed": "Failed",
+                "pending": "Pending"
+            },
+            "common": {
+                "tryAgain": "Try Again",
+                "cancel": "Cancel",
+                "requiredField": "This field is required"
+            }
+        }
+    },
+    "referral": {
+        "title": "Referral Program",
+        "copied": "Copied",
+        "share": "Share",
+        "referralText": ":referral_text",
+        "referralJoined": ":referral_joined",
+        "referredFriends": {
+            "title": "Referred Friends",
+            "noData": "No referred friends history found",
+            "referralTree": "Referral Tree",
+            "status": {
+                "active": "Active",
+                "inactive": "Inactive"
+            },
+            "userInfo": {
+                "portfolio": ":portfolio",
+                "noPortfolioText": "No portfolio",
+                "joinedText": "Joined"
+            }
+        },
+        "referralTree": {
+            "title": "Referral Tree",
+            "user": {
+                "referrerBadge": "REFERRER"
+            }
+        }
+    },
+    "portfolio": {
+        "title": "Your Portfolios",
+        "noData": "No portfolio found"
+    },
+    "rewards": {
+        "title": "Rewards",
+        "portfolio": {
+            "pointsLabel": "My Reward Points",
+            "redeemButton": "Redeem Now"
+        },
+        "sections": {
+            "earnings": "Reward Point Earnings:",
+            "redeems": "Reward Points Redeem:",
+            "noEarnings": "No earning history found",
+            "noRedeems": "No Redeem history found"
+        },
+        "tableHeaders": {
+            "portfolioList": "Portfolio List",
+            "transactions": "Amount Of Transactions",
+            "reward": "Reward",
+            "perPoints": "Per Points",
+            "redeemAmount": "Redeem Amount"
+        },
+        "rewardSummary": {
+            "title": "Redeem Summary",
+            "noData": "No redeem summary found",
+            "dialog": {
+                "time": "Time",
+                "transactionId": "Transaction ID",
+                "amount": "Amount",
+                "charge": "Charge",
+                "status": "Status",
+                "method": "Method",
+                "closeButton": "Close"
+            }
+        }
+    },
+    "settings": {
+        "title": "Settings",
+        "menuItems": {
+            "profile": "Profile Settings",
+            "password": "Change Password",
+            "twoFA": "Security Settings",
+            "idVerification": "ID Verification",
+            "notifications": "All Notification",
+            "helpSupport": "Help & Support",
+            "deleteAccount": "Account Closing",
+            "signOut": "Sign out"
+        },
+        "kycStatus": {
+            "submit": "Submit Now",
+            "approved": "Approved",
+            "pending": "Pending"
+        },
+        "close_account_alert": {
+            "title": "Are you sure?",
+            "subtitle": "You want to close this account?",
+            "reason_placeholder": "Reason (optional)",
+            "cancel": "Cancel",
+            "confirm": "Confirm"
+        }
+    },
+    "help_and_support": {
+        "title": "My Ticket List",
+        "search_field_hint": "Subject",
+        "filter_icon_alt": "Filter",
+        "no_tickets": "No tickets found",
+        "view_button": "View",
+        "replay_ticket": {
+            "title": "Reply Ticket",
+            "close_ticket": "Close Ticket",
+            "reopen_ticket": "Reopen Ticket",
+            "write_message_placeholder": "Write your reply here.....",
+            "add_attachment": "Add Attachment",
+            "send_button": "Send",
+            "message_required": "Message fields is required",
+            "attachment_preview": "Attachment Preview",
+            "attachments_label": "Attachments",
+            "admin_name": "Super Admin"
+        },
+        "create_ticket_dialog": {
+            "title": "Open a New Ticket",
+            "subject_label": "Subject",
+            "precedence_label": "Precedence",
+            "precedence_placeholder": "Select Precedence",
+            "message_label": "Your Message",
+            "attachments_label": "Attachments",
+            "attach_file": "Attach File",
+            "close_button": "Close",
+            "create_button": "Create Ticket",
+            "toast_required_fields": "Fill up all required fields",
+            "dropdown_title": "Select Precedence",
+            "precedence_options": {
+                "low": "Low",
+                "medium": "Medium",
+                "high": "High"
+            }
+        },
+        "subject_input_section": {
+            "label": "Subject"
+        },
+        "ticket_history_filter_popup": {
+            "title": "Filters",
+            "date_label": "Date",
+            "dialog_title": "Select Date Range",
+            "cancel_button": "Cancel",
+            "apply_button": "Apply",
+            "reset_button": "Reset",
+            "search_button": "Search"
+        }
+    },
+    "profileSettings": {
+        "title": "Profile Settings",
+        "personalInfo": "Personal Information",
+        "contactDetails": "Contact Details",
+        "buttons": {
+            "saveChanges": "Save Changes"
+        },
+        "formFields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "username": "Username",
+            "gender": "Gender",
+            "selectGender": "Select Gender",
+            "dateOfBirth": "Date of Birth",
+            "selectDate": "Select Date",
+            "email": "Email Address",
+            "phone": "Phone",
+            "country": "Country",
+            "city": "City",
+            "zip": "Zip",
+            "address": "Address",
+            "joiningDate": "Joining Date"
+        },
+        "genderOptions": {
+            "male": "Male",
+            "female": "Female",
+            "other": "Other"
+        }
+    },
+    "changePassword": {
+        "title": "Change Password",
+        "buttons": {
+            "changePassword": "Change Password"
+        },
+        "formFields": {
+            "currentPassword": "Current Password",
+            "newPassword": "New Password",
+            "confirmPassword": "Confirm Password"
+        },
+        "validation": {
+            "currentPasswordRequired": "Please enter your current password",
+            "newPasswordRequired": "Please enter a new password",
+            "passwordLength": "Password must be at least 8 characters",
+            "confirmPasswordRequired": "Please confirm your password",
+            "passwordMismatch": "Passwords do not match"
+        }
+    },
+    "securitySettings": {
+        "title": "Security Settings",
+        "2fa": {
+            "title": "2FA Authentication",
+            "description": "Enhance your account security with two-factor authentication",
+            "buttonText": "Generate 2FA"
+        },
+        "passcode": {
+            "title": "Passcode",
+            "description": "Create a secure passcode for quick access to your account",
+            "buttonText": "Generate Passcode"
+        },
+        "changePasscode": {
+            "title": "Change Passcode",
+            "fields": {
+                "old": "Old Passcode",
+                "new": "New Passcode",
+                "confirm": "Confirm Passcode"
+            },
+            "buttons": {
+                "close": "Close",
+                "change": "Change Passcode"
+            },
+            "toast": {
+                "fillAllFields": "Fill up all required fields",
+                "mismatch": "Passcode do not match"
+            }
+        },
+        "securitySettings": {
+            "passcode": {
+                "title": "Passcode",
+                "disable": "Disable Passcode",
+                "change": "Change Passcode"
+            },
+            "disablePopup": {
+                "title": "Confirm Your Password",
+                "passwordLabel": "Password",
+                "close": "Close",
+                "confirm": "Confirm",
+                "passwordRequired": "Password field is required"
+            },
+            "generatePopup": {
+                "title": "Add Passcode",
+                "passcodeLabel": "Passcode",
+                "confirmPasscodeLabel": "Confirm Passcode",
+                "close": "Close",
+                "confirm": "Confirm",
+                "requiredFieldsError": "Fill up all required fields",
+                "passcodeMismatchError": "Passcode do not match"
+            },
+            "twoFa": {
+                "title": "2FA Authentication",
+                "description": "Two Factor Authentication (2FA) strengthens access security by requiring two methods (also Referred To As Factors) to verify your identity. Two Factor Authentication protects against phishing, social engineering and password brute force attacks and secures your logins from attackers exploiting weak or stolen credentials.",
+                "scanQrText": "Scan the QR code with you Google\nAuthenticator App",
+                "enterPin": "Enter the PIN from Google Authenticator App",
+                "enterPassword": "Enter Your Password",
+                "enableButton": "Enable 2FA",
+                "disableButton": "Disable 2FA"
+            }
+        }
+    },
+    "id_verification": {
+        "title": "ID Verification",
+        "verification_center": "Verification Center",
+        "status": {
+            "not_submitted": "You have not submitted any KYC documents yet",
+            "verified": "You have submitted your documents and it is verified",
+            "pending": "You have submitted your documents and it is awaiting for the approval"
+        },
+        "no_documents": "You have nothing to submit",
+        "kyc_form": {
+            "submit_button": "Submit Now",
+            "tap_to_capture": "Tap to capture :title",
+            "validation": {
+                "required": ":field is required"
+            },
+            "picker": {
+                "title": "Select Image Source",
+                "camera": "Camera",
+                "gallery": "Gallery"
+            }
+        },
+        "passport_or_driving": {
+            "title": "Passport or Driving Licence",
+            "name_label": "Name",
+            "front_page": "Front Page",
+            "back_page": "Back Page",
+            "submit_button": "Submit Now"
+        },
+        "kyc_history": {
+            "title": "KYC History",
+            "no_data": "No Kyc history found",
+            "status": {
+                "pending": "Pending",
+                "approved": "Approved",
+                "rejected": "Rejected"
+            },
+            "submission_date": "Submission Date:",
+            "view_button": "View",
+            "kyc_dialog": {
+                "title": "Details",
+                "status_label": "Status:",
+                "admin_message_label": "Message From Admin:",
+                "status": {
+                    "pending": "Pending",
+                    "approved": "Approved",
+                    "rejected": "Rejected"
+                }
+            }
+        }
+    },
+    "notification": {
+        "title": "Notification",
+        "header": "Notification",
+        "mark_all_read": "Mark all read",
+        "no_data": "No notifications found",
+        "sections": {
+            "today": "Today",
+            "yesterday": "Yesterday"
+        }
+    },
+    "common": {
+        "noDataFound": {
+            "noDataFound": "No Data Found!",
+            "refreshingText": "Try refreshing or check back later.",
+            "tryAgainButtonText": "Try Again"
+        },
+        "imagePicker": {
+            "selectImageSource": "Select Image Source",
+            "camera": "Camera",
+            "gallery": "Gallery"
+        },
+        "confirm_passcode_popup": {
+            "title": "Confirm Your Passcode",
+            "passcode_label": "Passcode",
+            "close_button": "Close",
+            "confirm_button": "Confirm"
+        },
+        "bottomNavBar": {
+            "home": "Home",
+            "card": "Card",
+            "wallets": "Wallets",
+            "reward": "Reward",
+            "settings": "Settings"
+        },
+        "alertDialog": {
+            "unauthorizedTitle": "Unauthorized",
+            "unauthorizedMessage": "You are not authorized to access this resource. Please log in again!",
+            "cancelButton": "Cancel",
+            "confirmButton": "Confirm"
+        }
+    }
+}

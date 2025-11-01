@@ -1,0 +1,58 @@
+:root {
+  // font family declaration
+  --td-ff-body: "K2D", sans-serif;
+  --td-ff-fontawesome: "Font Awesome 6 Pro";
+  --td-ff-icomoon: "icomoon";
+
+  // color declaration
+
+  // Common Color
+  --td-white: hsl(0, 0%, 100%);
+  --td-black: hsl(0, 0%, 0%);
+  --td-placeholder: hsla(0, 0%, 0%, 0.5);
+  --td-selection: hsl(0, 0%, 0%);
+
+  // Heading Color
+  --td-heading: #130804;
+
+  // Theme Color
+  --td-primary: #FF7E42;
+  
+  // Text Color
+  --td-text-primary: #585858;
+  --td-text-secondary: #b9b8c3;
+
+  // Border Color
+  --td-border-primary: #DBDBDB;
+
+  // Others Color
+  --td-warning: #FFA336;
+  --td-success: #00D909;
+  --td-danger: #FF0101;
+  --td-green: #80ED99 ;
+  --td-sugar-milk: #FFF9F6;
+  --td-forsythia-bud: #20293A;
+  --golden-glam: #F4B943;
+
+  //font weight declaration
+  --td-fw-normal: normal;
+  --td-fw-thin: 100;
+  --td-fw-elight: 200;
+  --td-fw-light: 300;
+  --td-fw-regular: 400;
+  --td-fw-medium: 500;
+  --td-fw-sbold: 600;
+  --td-fw-bold: 700;
+  --td-fw-ebold: 800;
+  --td-fw-black: 900;
+
+  // font size declaration
+  --td-fs-body: 16px;
+  --td-fs-p: 16px;
+  --td-fs-h1: 60px;
+  --td-fs-h2: 48px;
+  --td-fs-h3: 38px;
+  --td-fs-h4: 32px;
+  --td-fs-h5: 24px;
+  --td-fs-h6: 20px;
+}

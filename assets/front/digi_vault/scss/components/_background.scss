@@ -1,0 +1,37 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  Background Css
+/*----------------------------------------*/
+
+.white-bg {
+  background-color: var(--td-white);
+}
+
+.black-bg {
+  background-color: var(--td-black);
+}
+
+.gray-bg {
+  background-color: var(--td-gary);
+}
+
+.azure-bg {
+  background-color: var(--td-azure);
+}
+
+.azure-bg-10 {
+  background-color: rgba($azure, $alpha: 0.1);
+}
+
+.cetacean-blue-bg {
+  background-color: var(--td-cetacean-blue);
+}
+
+.anti-flash-bg {
+  background-color: var(--td-anti-flash);
+}
+
+.alice-blue-bg {
+  background-color: var(--td-alice-blue);
+}

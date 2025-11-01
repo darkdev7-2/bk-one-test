@@ -1,0 +1,71 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Page contents styles
+/*----------------------------------------*/
+
+.td-page-contents {
+
+	h3 {
+		font-size: 32px;
+		line-height: 1.3;
+		margin-bottom: 30px;
+	}
+
+	h4 {
+		font-size: 20px;
+		margin-bottom: 16px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgba($heading, $alpha: 0.1);
+
+		@media #{$xs,$sm,$md} {
+			font-size: 18px;
+		}
+	}
+
+	p {
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	ul {
+		margin-bottom: 35px !important;
+		list-style-type: disc;
+		padding-left: 28px;
+
+		li {
+			margin-bottom: 14px;
+			color: var(--td-text-primary);
+
+			span {
+				font-size: 16px;
+				font-weight: 500;
+
+				i {
+					font-size: 5px;
+					border-radius: 0;
+					margin-inline-end: 10px;
+					color: var(--td-text-primary);
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	a {
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 27px;
+		color: var(--td-primary-hover);
+		text-decoration: underline;
+	}
+
+	.author-mail {
+		font-size: 21px;
+		font-weight: 700;
+		line-height: 29px;
+		color: var(--td-primary-hover);
+	}
+}

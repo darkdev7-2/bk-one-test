@@ -1,0 +1,95 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* cookies style
+/*----------------------------------------*/
+.caches-privacy {
+	max-width: 810px;
+	position: fixed;
+	bottom: 30px;
+	inset-inline-start: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	row-gap: 12px;
+	column-gap: 12px;
+	@include backdrop-filter(22px);
+	background: var(--td-ghost-white);
+	border-radius: 8px;
+	padding: 12px 24px 12px 24px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 1px 0px rgba(96, 96, 96, 0.1), 0px 12px 24px -6px rgba(96, 96, 96, 0.15);
+	width: 90%;
+	z-index: 111;
+	transition: 0.3s;
+
+	@media #{$xs,$sm} {
+		flex-direction: column;
+		align-items: self-start;
+	}
+
+	@media #{$xxs} {
+		padding: 12px 16px 12px 16px;
+
+		.caches-btns {
+			.td-btn {
+				font-size: 12px;
+
+				&.gradient-outline-btn {
+					.btn-text {
+						color: var(--td-heading);
+					}
+				}
+			}
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		inset: 0;
+		@include border-radius(8px);
+		padding: 1px;
+		background: linear-gradient(94.71deg, rgba(37, 140, 244, 1) 0%, rgba(244, 37, 244, 1) 100%);
+		-webkit-mask: linear-gradient(var(--td-white) 0 0) content-box, linear-gradient(var(--td-white) 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		z-index: -1;
+	}
+
+	.caches-contents {
+		.title {
+			font-size: 16px;
+			margin-bottom: 8px;
+			font-weight: 600;
+
+			@media #{$xs} {
+				font-size: 18px;
+			}
+		}
+
+		p {
+			font-size: 14px;
+			margin-bottom: 0;
+
+			a {
+				color: $primary;
+			}
+		}
+	}
+
+	.caches-btns {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 0 0 auto;
+		flex-wrap: wrap;
+		gap: 12px;
+
+		.td-btn.gradient-outline-btn {
+			color: var(--td-heading);
+		}
+	}
+}

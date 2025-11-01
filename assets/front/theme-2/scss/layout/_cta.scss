@@ -1,0 +1,89 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Cta style
+/*----------------------------------------*/
+
+.cta-main-wrapper {
+    background-color: var(--td-white);
+    padding: 50px 50px;
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+    margin-top: 125px;
+    @media #{$lg} {
+        margin-top: 70px;
+    }
+    @media #{$xs,$sm,$md,$lg} {
+        margin-top: 0;
+    }
+    @media #{$xs} {
+        padding: 25px 25px;
+    }
+}
+.cta-content {
+    .cta-title {
+        font-size: 45px;
+        margin-bottom: 20px;
+        color: var(--td-heading);
+        @media #{$xxl} {
+            font-size: 38px;
+        }
+        @media #{$xl} {
+            font-size: 32px;
+        }
+        @media #{$lg} {
+            font-size: 30px;
+        }
+        @media #{$md} {
+            font-size: 28px;
+        }
+        @media #{$sm} {
+            font-size: 24px;
+        }
+        @media #{$xs} {
+            font-size: 20px;
+        }
+    }
+    .description {
+        margin-bottom: 33px;
+        padding-bottom: 33px;
+        position: relative;
+        color: var(--td-text-primary);
+        &:before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            inset-inline-start: 0;
+            width: 100%;
+            border-width: 1px 0 0 0;
+            border-style: solid;
+            border-image: linear-gradient(
+              90deg,
+              rgba(88, 88, 88, 0.33) 0%,
+              rgba(88, 88, 88, 0) 100%
+            );
+            border-image-slice: 1;
+        }
+    }
+}
+
+.cta-thumb {
+    position: absolute;
+    bottom: -54px;
+    inset-inline-end: 0;
+}
+.cta-shape {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    z-index: -1;
+    max-width: 431px;
+    @media #{$xs,$sm,$md} {
+        position: inherit;
+        margin-top: 70px;
+    }
+    img {
+        width: 100%;
+    }
+}

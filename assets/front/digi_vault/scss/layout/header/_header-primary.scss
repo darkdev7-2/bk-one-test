@@ -1,0 +1,23 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Header primary Styles
+/*----------------------------------------*/
+.header-area {
+    &.header-style-one {
+        &.header-primary {
+            background-color: var(--td-cetacean-blue-2);
+    
+            &::before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to right, rgb(26, 0, 71), rgb(25, 0, 70), rgb(32, 4, 78), rgb(65, 38, 126), rgb(67, 54, 146), rgb(59, 41, 133), rgb(54, 12, 99), rgb(30, 0, 72), rgb(26, 0, 71));
+                z-index: -1;
+            }
+        }
+    }
+}

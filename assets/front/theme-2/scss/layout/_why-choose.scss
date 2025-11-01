@@ -1,0 +1,132 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  why choose css
+/*----------------------------------------*/
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: auto 547px auto;
+    align-items: center;
+    gap: 50px 20px;
+    @media #{$xl} {
+        grid-template-columns: auto 400px auto;
+    }
+    @media #{$lg} {
+        gap: 50px 0px;
+        grid-template-columns: 1fr 240px 1fr;
+    }
+    @media #{$xs,$sm,$md} {
+        grid-template-columns: 1fr;
+    }
+}
+.why-choose-item {
+    background: var(--td-white);
+    border: 1px solid var(--td-border-primary);
+    box-shadow: 0px 36px 65px -4px rgba(19, 8, 4, 0.08);
+    border-radius: 18px;
+    padding: 20px 76px 20px 28px; 
+    position: relative;
+    @include td-transition(.3s);
+    @include rtl {
+        padding: 20px 28px 20px 76px;
+    }
+    @include dark {
+        background-color: #415C68;
+        border-color: rgba(255,255,255,0.3);
+    }
+    &.has-right {
+        margin-inline-start: 50px;
+        padding: 20px 28px 20px 76px;
+        @include rtl {
+            padding: 20px 76px 20px 28px;
+        }
+        @media #{$lg} {
+            padding: 20px 28px 20px 46px;
+        }
+        .why-choose-icon {
+            inset-inline-end: auto;
+            inset-inline-start: -51px;
+        }
+    }
+    &.has-left {
+        text-align: end;
+        margin-inline-end: 50px;
+        @media #{$xs,$sm,$md} {
+            text-align: start;
+            margin-inline-start: 50px;
+            padding: 20px 28px 20px 76px;
+        } 
+    }
+    .has-left {
+        margin-inline-end: 50px;
+        .why-choose-icon {
+            inset-inline-end: auto;
+            inset-inline-start: -52px;
+        }
+    }
+}
+.why-choose-content {
+    .title {
+        font-size: 24px;
+        margin-bottom: 12px;
+        @media #{$xl,$lg,$xs} {
+            font-size: 20px;
+        }
+    }
+    .description {
+        margin-bottom: 0;
+    }
+}
+.why-choose-icon {
+    position: absolute;
+    inset-inline-end: -51px;
+    top: 50%; 
+    transform: translateY(-50%);
+    padding: 11px;
+    background: var(--td-white);
+    box-shadow: 0px 9px 35px -5px rgba(0, 0, 0, 0.12);
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include dark {
+        background-color: #415C68;
+    }
+    @media #{$xs,$sm,$md} {
+        inset-inline-start: -51px;
+        inset-inline-end: auto;
+    }
+    span {
+        background: #FFEFE8;
+        border-radius: 100px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        @media #{$lg} {
+            width: 60px;
+            height: 60px;
+        }
+        img {
+            max-width: 50px;
+            @media #{$lg} {
+                max-width: 34px;
+            }
+        }
+    }
+}
+.why-choose-column {
+    display: flex;
+    flex-direction: column;
+    gap: 100px 0;
+    @media #{$xs,$sm,$md} {
+        gap: 30px 0;
+    }
+}
+.why-choose-thumb {
+    @media #{$xs,$sm,$md} {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}

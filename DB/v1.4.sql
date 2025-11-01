@@ -1,0 +1,2 @@
+ALTER TABLE `loans` ADD `txn_id` BIGINT NOT NULL AFTER `loan_no`;
+ALTER TABLE `cards` ADD `provider` VARCHAR(255) NOT NULL AFTER `amount`, ADD `card_number` VARCHAR(255) NOT NULL AFTER `provider`, ADD `cvc` VARCHAR(255) NOT NULL AFTER `card_number`;

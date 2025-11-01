@@ -1,0 +1,52 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* How it works styles
+/*----------------------------------------*/
+
+.how-it-works-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.how-it-works-step {
+    background: var(--td-white);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition: transform .3s ease, box-shadow .3s ease;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: rgba(34, 34, 34, .1);
+    border-width: 1px;
+    padding: 25px 30px 25px;
+    position: relative;
+    backdrop-filter: blur(4px);
+
+    .step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .step-number {
+        font-size: 24px;
+        font-weight: bold;
+        color: #4a90e2;
+        background: #e3f2fd;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+    }
+}

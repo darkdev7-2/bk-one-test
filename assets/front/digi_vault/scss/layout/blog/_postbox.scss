@@ -1,0 +1,101 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Postbox styles
+/*----------------------------------------*/
+
+// Postbox contents 
+.postbox-contents {
+	border-left: 1px solid rgba($heading, $alpha: 0.1);
+	padding-left: 30px;
+
+	@media #{$xs,$sm} {
+		padding-left: 0;
+		border-left: 0;
+	}
+
+	h2 {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		font-size: 20px;
+		margin-bottom: 16px;
+
+		@media #{$xs,$sm} {
+			font-size: 18px;
+		}
+	}
+
+	span {
+		color: rgba($white, $alpha: 0.7);
+	}
+
+	p {
+		margin-bottom: 45px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	img {
+		@include border-radius(8px);
+		margin-bottom: 30px;
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left: 28px;
+		margin-bottom: 16px;
+		margin-top: 20px;
+
+		li {
+			margin-bottom: 16px;
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 500;
+		}
+	}
+}
+
+// sidebar-widget 
+.sidebar-widget-title {
+	display: block;
+	font-size: 20px;
+	margin-bottom: 25px
+}
+
+.sidebar-widget {
+	ul {
+		li {
+			list-style: none;
+			font-weight: 500;
+			font-size: 12px;
+			margin-bottom: 6px;
+
+			a {
+				font-weight: 500;
+				font-size: 16px;
+				position: relative;
+				background: var(--td-white);
+				@include box-shadow(0px 1px 3px rgba(3, 4, 28, 0.06));
+				display: block;
+				padding: 12px 14px;
+				@include border-radius(6px);
+
+				span {
+					float: right;
+					font-weight: 500;
+					font-size: 12px;
+					display: inline-block;
+					line-height: 1;
+					padding: 4px 11px 5px;
+					border: 1px solid #EAEAEF;
+					@include border-radius(20px);
+					margin-top: 2px;
+				}
+			}
+		}
+	}
+}

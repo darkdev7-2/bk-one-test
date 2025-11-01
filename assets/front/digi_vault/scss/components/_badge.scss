@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Badge styles
+/*----------------------------------------*/
+.td-badge {
+	@include inline-flex();
+	align-items: center;
+	justify-content: center;
+	padding: 7px 15px;
+	line-height: 1;
+	font-size: 12px;
+	font-weight: 600;
+	background: rgba(94, 167, 253, 0.2);
+	@include border-radius(30px);
+	border: 1px solid rgba(94, 167, 253, 0.6);
+
+	&.badge-success {
+		background: rgba(17, 188, 13, 0.06);
+		border: 1px solid rgba(17, 188, 13, 0.15);
+		color: var(--td-success);
+	}
+
+	&.badge-warning {
+		background: rgba(255, 183, 3, 0.06);
+		border: 1px solid rgba(255, 183, 3, 0.15);
+		color: var(--td-warning);
+	}
+
+	&.badge-danger {
+		background: rgba(237, 64, 48, 0.1);
+		border: 1px solid rgba(237, 64, 48, 0.1);
+		color: var(--td-danger);
+	}
+
+	&.badge-green {
+		background: rgba(13, 189, 63, 0.1);
+		color: var(--td-green);
+	}
+}

@@ -1,0 +1,41 @@
+//color Variables
+
+// Common Color
+$white: #ffffff;
+$black: #000000;
+$black-alt: #030303;
+$placeholder: #000000;
+$selection: #000000;
+
+// Theme Color
+$primary: #6C73FF;
+$primary-alt: #6C73FF;
+
+// Heading Color
+$heading: #222222;
+
+// Text Color
+$text-primary: rgba(8, 8, 8, 0.7);
+
+// Border Color
+$border-primary: #eaeaea;
+
+// Others Color
+$yellow: #ffa336;
+$warning: #FFA336;
+$success: #00a67e;
+$danger: #d14249;
+$green: #80ED99;
+$azure: #008EFF;
+$alice-blue: #F1F7FF;
+
+
+// Responsive Variables
+$x3l: 'only screen and (min-width: 1600px) and (max-width: 1800px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs: '(max-width: 575px)';
+$xxs: "(max-width: 480px)";

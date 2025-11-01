@@ -1,0 +1,34 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Default Spacing
+/*----------------------------------------*/
+
+.section_space {
+    padding-block-start: clamp(3.125rem, 6vw + 1rem, 6.25rem); /* Max 100px */
+    padding-block-end: clamp(3.125rem, 6vw + 1rem, 6.25rem);
+}
+
+.section_space-top {
+    padding-block-start: clamp(3.125rem, 6vw + 1rem, 6.25rem);
+}
+
+.inner-pages_space-top {
+    padding-block-start: clamp(3.125rem, 6vw + 1rem, 6.25rem);
+}
+
+.section_space-bottom {
+    padding-block-end: clamp(3.75rem, 6.5vw + 1rem, 6.25rem);
+}
+
+.section_title_space {
+    margin-bottom: 45px;
+
+    @media #{$md} {
+        margin-bottom: 44px;
+    }
+
+    @media #{$xs,$sm} {
+        margin-bottom: 38px;
+    }
+}

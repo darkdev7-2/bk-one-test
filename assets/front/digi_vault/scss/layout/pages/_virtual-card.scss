@@ -1,0 +1,33 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* virtual card styles
+/*----------------------------------------*/
+.virtual-card-contents {
+    margin-right: 110px;
+    @media #{$xs,$sm,$md} {
+        margin-right: 0;
+    }
+    .bottom-contents {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        .payment-method {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 14px;
+        }
+    }
+}
+.virtual-card-thumb {
+    position: absolute;
+    bottom: 0;
+    width: 476px;
+    @media #{$xs,$sm,$md} {
+        position: inherit;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

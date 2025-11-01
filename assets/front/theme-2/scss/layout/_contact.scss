@@ -1,0 +1,122 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Contact css
+/*----------------------------------------*/
+// Contact info style
+.contact-info-item {
+    background: var(--td-white);
+    border: 1px solid var(--td-border-primary);
+    border-radius: 20px;
+    padding: 95px 50px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    @include dark {
+        background-color: #415C68;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+    @media #{$md,$lg,$xl} {
+        padding: 75px 30px 50px;
+    }
+    @media #{$xs} {
+        padding: 75px 20px 50px;
+    }
+    .icon {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        max-width: 118px;
+        @media #{$xs,$sm,$md,$lg,$xl} {
+            max-width: 98px;
+        }
+        span {
+            background: var(--td-white);
+            box-shadow: 0px 14px 24px -4px rgba(19, 8, 4, 0.11);
+            border-radius: 50%;
+            display: inline-block;
+            @include dark {
+                background-color: #415C68;
+            }
+        }
+    }
+    .contents {
+        .title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .description {
+            margin-bottom: 15px;
+        }
+        .link {
+            font-size: 28px;
+            font-weight: 700;
+            @include dark {
+                color: var(--td-white);
+            }
+            @media #{$md,$lg,$xl} {
+                font-size: 22px;
+            }
+            @media #{$sm} {
+                font-size: 24px;
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            }
+            a {
+                &:hover {
+                    color: var(--td-primary);
+                }
+            }
+        }
+    }
+}
+
+// Contact form style
+.contact-form-wrapper {
+	form {
+		background: #FFF5F1;
+		border: 1px solid #FFDAC7;
+		border-radius: 16px;
+		padding: 50px 50px;
+        @include dark {
+            background: #415C68;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        @media #{$xs,$sm} {
+            padding: 30px 30px;
+        }
+        @media #{$sm} {
+            padding: 30px 30px;
+        }
+        @media #{$xs} {
+            padding: 20px 20px;
+        }
+	}
+}
+.contact-form-input {
+    .input,textarea {
+        background: var(--td-white);
+        border: 1px solid #DEE4EC;
+        box-shadow: 0px 36px 75px -4px rgba(19, 8, 4, 0.08);
+        border-radius: 14px;
+        height: 60px;
+        padding: 0 20px;
+        font-size: 16px;
+        color: var(--td-heading);
+        &:focus {
+            border-color: var(--td-primary);
+        }
+        @include td-placeholder {
+            color: var(--td-heading);
+            font-size: 16px;
+        }
+    }
+	.textarea {
+		height: 230px;
+		padding: 20px 20px;
+	}
+}

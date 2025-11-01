@@ -1,0 +1,77 @@
+@extends('frontend::layouts.app')
+@section('content')
+    <!-- Breadcrumb section start -->
+    <div class="td-breadcrumb-area p-relative z-index-11 fix"
+        data-background="{{ asset('front/digi_vault/images/bg/breadcrumb.png') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="breadcrumb-contents">
+                        <h1 class="breadcrumb-title">
+                            @yield('title')
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb section end -->
+    @yield('page-content')
+
+    @php
+        $cta = \App\Models\LandingPage::where('code', 'cta')
+            ->where('locale', app()->getLocale())
+            ->first();
+        $ctaData = json_decode($cta->data);
+
+    @endphp
+    <!-- Cta section start -->
+    <section class="cta-section include-bg section_space"
+        data-background="{{ asset('front/digi_vault/images/bg/cta-bg.png') }}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-6 col-xl-8 col-lg-8">
+                    <div class="cta-main-wrapper text-center">
+                        <div class="icon has_fade_anim">
+                            <img src="{{ asset(setting('site_logo', 'global')) }}" alt="Cta Logo">
+                        </div>
+                        <div class="contents">
+                            <h3 class="title has_fade_anim">{{ $ctaData->title }}</h3>
+                            <div class="text has_fade_anim">
+                                <p class="description">{{ $ctaData->description }}</p>
+                            </div>
+                            <div class="btn-inner has_fade_anim">
+                                <a class="td-btn gradient-btn radius-8" href="{{ url('button_url') }}"
+                                    target="{{ $ctaData->button_target }}">
+                                    <span class="btn-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_4006_5902)">
+                                                <path
+                                                    d="M13.4163 6.41699H12.2497V5.25033C12.2497 5.09562 12.1882 4.94724 12.0788 4.83785C11.9694 4.72845 11.8211 4.66699 11.6663 4.66699C11.5116 4.66699 11.3633 4.72845 11.2539 4.83785C11.1445 4.94724 11.083 5.09562 11.083 5.25033V6.41699H9.91634C9.76163 6.41699 9.61326 6.47845 9.50386 6.58785C9.39447 6.69724 9.33301 6.84562 9.33301 7.00033C9.33301 7.15504 9.39447 7.30341 9.50386 7.4128C9.61326 7.5222 9.76163 7.58366 9.91634 7.58366H11.083V8.75033C11.083 8.90504 11.1445 9.05341 11.2539 9.1628C11.3633 9.2722 11.5116 9.33366 11.6663 9.33366C11.8211 9.33366 11.9694 9.2722 12.0788 9.1628C12.1882 9.05341 12.2497 8.90504 12.2497 8.75033V7.58366H13.4163C13.5711 7.58366 13.7194 7.5222 13.8288 7.4128C13.9382 7.30341 13.9997 7.15504 13.9997 7.00033C13.9997 6.84562 13.9382 6.69724 13.8288 6.58785C13.7194 6.47845 13.5711 6.41699 13.4163 6.41699Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M5.25 7C5.94223 7 6.61892 6.79473 7.1945 6.41014C7.77007 6.02556 8.21867 5.47893 8.48358 4.83939C8.74849 4.19985 8.8178 3.49612 8.68275 2.81719C8.5477 2.13825 8.21436 1.51461 7.72487 1.02513C7.23539 0.535644 6.61175 0.202301 5.93282 0.0672531C5.25388 -0.0677952 4.55015 0.0015165 3.91061 0.266423C3.27107 0.53133 2.72444 0.979934 2.33986 1.55551C1.95527 2.13108 1.75 2.80777 1.75 3.5C1.75093 4.42797 2.11997 5.31768 2.77615 5.97385C3.43233 6.63003 4.32203 6.99907 5.25 7ZM5.25 1.16667C5.71149 1.16667 6.16262 1.30352 6.54633 1.55991C6.93005 1.8163 7.22912 2.18071 7.40572 2.60707C7.58232 3.03343 7.62853 3.50259 7.5385 3.95521C7.44847 4.40783 7.22624 4.8236 6.89992 5.14992C6.57359 5.47624 6.15783 5.69847 5.70521 5.7885C5.25259 5.87853 4.78343 5.83232 4.35707 5.65572C3.93071 5.47912 3.56629 5.18005 3.3099 4.79633C3.05351 4.41262 2.91667 3.96149 2.91667 3.5C2.91667 2.88116 3.1625 2.28767 3.60008 1.85009C4.03767 1.4125 4.63116 1.16667 5.25 1.16667Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M5.25 8.16699C3.85809 8.16854 2.52363 8.72216 1.53939 9.70639C0.555163 10.6906 0.001544 12.0251 0 13.417C0 13.5717 0.0614582 13.7201 0.170854 13.8295C0.280251 13.9389 0.428624 14.0003 0.583333 14.0003C0.738043 14.0003 0.886416 13.9389 0.995812 13.8295C1.10521 13.7201 1.16667 13.5717 1.16667 13.417C1.16667 12.334 1.59687 11.2954 2.36265 10.5296C3.12842 9.76387 4.16703 9.33366 5.25 9.33366C6.33297 9.33366 7.37158 9.76387 8.13735 10.5296C8.90313 11.2954 9.33333 12.334 9.33333 13.417C9.33333 13.5717 9.39479 13.7201 9.50419 13.8295C9.61358 13.9389 9.76196 14.0003 9.91667 14.0003C10.0714 14.0003 10.2197 13.9389 10.3291 13.8295C10.4385 13.7201 10.5 13.5717 10.5 13.417C10.4985 12.0251 9.94484 10.6906 8.9606 9.70639C7.97637 8.72216 6.64191 8.16854 5.25 8.16699Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_4006_5902">
+                                                    <rect width="14" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span class="btn-text">{{ $ctaData->button_label }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cta section start -->
+@endsection

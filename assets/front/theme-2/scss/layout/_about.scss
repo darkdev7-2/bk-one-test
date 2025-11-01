@@ -1,0 +1,92 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* About style
+/*----------------------------------------*/
+.about-thumb-wrap {
+    position: relative;
+    z-index: 11;
+    .about-card-one {
+        background: rgba($white, $alpha: 0.75);
+        box-shadow: -10px 18px 33px -3px rgba(46, 30, 85, 0.12);
+        backdrop-filter: blur(35px);
+        border-radius: 16px;
+        width: max-content;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        inset-inline-start: -5%;
+        top: 30%;
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    .about-card-two {
+        background: rgba($white, $alpha: 0.75);
+        box-shadow: -10px 18px 33px -3px rgba(46, 30, 85, 0.12);
+        backdrop-filter: blur(35px);
+        border-radius: 16px;
+        max-width: 180px;
+        padding: 15px 20px;
+        position: absolute;
+        inset-inline-start: 21%;
+        bottom: 0;
+        .short-title {
+            font-size: 15px;
+            color: var(--td-heading);
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+    .check-line {
+        position: absolute;
+        top: 10%;
+        inset-inline-end: -7%;
+        box-shadow: 14px 20px 45px 2px rgba(8, 34, 84, 0.1);
+        border-radius: 100px;
+    }
+    .about-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .round-one {
+        width: 175px;
+        height: 175px;
+        background: #7984EE;
+        border-radius: 50%;
+        position: absolute;
+        top: 20%;
+        z-index: -1;
+        inset-inline-start: 20%;
+    }
+    .round-two {
+        position: absolute;
+        width: 175px;
+        height: 175px;
+        background: #5BC1F4;
+        border-radius: 50%;
+        bottom: -40px;
+        z-index: -1;
+        inset-inline-start: 30%;
+    }
+}
+.about-content-wrap {
+    padding-inline-start: 25px;
+    .common-list {
+        margin-bottom: 35px;
+    }
+}
+.about-main-wrapper {
+    .btn-wrap {
+        .site-btn  {
+            background-color: #415C68;
+            color: var(--td-white);
+        }
+    }
+}

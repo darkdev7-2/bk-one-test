@@ -1,0 +1,96 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* About style
+/*----------------------------------------*/
+.video-wrapper {
+    margin-top: 30px;
+}
+.video-content {
+    background: var(--td-white);
+    border: 1px solid var(--td-border-primary);
+    box-shadow: 0px 36px 75px -4px rgba(19, 8, 4, 0.08);
+    border-radius: 24px;
+    width: max-content;
+    padding: 18px 40px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: 700;
+    z-index: 1;
+    @include dark {
+        background-color: #415C68;
+    }
+    @media #{$xxs} {
+        width: 100%;
+        padding: 12px 24px;
+    }
+    .title {
+        font-size: 20px;
+        @media #{$xxs} {
+            font-size: 18px;
+        }
+    }
+}
+.video-thumb-inner {
+    border: 10px solid var(--td-white);
+    box-shadow: 0px 26px 40px -6px rgba(0, 0, 0, 0.12);
+    border-radius: 24px;
+    position: relative;
+    @include dark {
+        border-color: #415C68;;
+    }
+    .play-btn {
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.32);
+        @media #{$xs,$sm,$md} {
+            padding: 10px;
+        }
+        span {
+            height: 130px;
+            width: 130px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(137.02deg, var(--td-primary) 0%, var(--golden-glam) 96.71%);
+            border-radius: 50%;
+            color: var(--td-white);
+            font-size: 30px;
+            @media #{$xs,$sm,$md,$lg} {
+                height: 80px;
+                width: 80px;
+            }
+        }
+    }
+}
+.video-thumb {
+    position: relative;
+    min-height: 650px;
+    border-radius: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media #{$xs} {
+        min-height: 380px;
+    }
+    @media #{$sm,$md,$lg} {
+        min-height: 500px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        inset-inline-start: 0;
+        background: linear-gradient(0deg, rgba(19, 8, 4, 0.52), rgba(19, 8, 4, 0.52));
+        border-radius: 24px;
+    }
+}

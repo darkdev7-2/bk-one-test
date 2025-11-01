@@ -1,0 +1,73 @@
+@use '../utils' as *;
+
+/*---------------------------------
+/*  Default Spacing
+---------------------------------*/
+.section-space {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  @media #{$xl} {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media #{$lg} {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media #{$md} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media #{$sm,$xs} {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+.section-space-top {
+  padding-top: 110px;
+  @media #{$xl} {
+    padding-top: 100px;
+  }
+  @media #{$lg} {
+    padding-top: 100px;
+  }
+  @media #{$md} {
+    padding-top: 80px;
+  }
+  @media #{$sm,$xs} {
+    padding-top: 70px;
+  }
+}
+.section-space-bottom {
+  padding-bottom: 110px;
+  @media #{$xl} {
+    padding-bottom: 100px;
+  }
+  @media #{$lg} {
+    padding-bottom: 100px;
+  }
+  @media #{$md} {
+    padding-bottom: 80px;
+  }
+  @media #{$sm,$xs} {
+    padding-bottom: 70px;
+  }
+}
+.section-title-space {
+  margin-bottom: 55px;
+  @media #{$xl} {
+    margin-bottom: 40px;
+  }
+  @media #{$lg} {
+    margin-bottom: 40px;
+  }
+  @media #{$md} {
+    margin-bottom: 40px;
+  }
+  @media #{$sm} {
+    margin-bottom: 30px;
+  }
+  @media #{$xs} {
+    margin-bottom: 30px;
+  }
+}

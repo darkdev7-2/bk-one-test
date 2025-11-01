@@ -1,0 +1,177 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* FAQ style
+/*----------------------------------------*/
+.accordion-wrapper {
+  &.site-faq {
+    .accordion {
+      .accordion-button {
+        padding: 20px 65px 20px 20px;
+        font-size: 24px;
+        font-weight: 500;
+        background: transparent;
+        box-shadow: none;
+        color: var(--td-heading);
+        border-top: 0;
+        font-weight: 700;
+        display: flex;
+        gap: 16px;
+        @include dark {
+          color: var(--td-white);
+        }
+        @media #{$sm} {
+          font-size: 20px;
+        }
+        @media #{$xs} {
+          font-size: 18px;
+        }
+        @media #{$xxs} {
+          font-size: 18px;
+          padding: 21px 30px 20px 20px;
+        }
+        @include rtl {
+          padding: 20px 20px 20px 67px;
+        }
+        &:not(.collapsed) {
+          border: 0;
+          border-radius: 0;
+          .count {
+            background: linear-gradient(137.02deg, var(--td-primary) 0%, #F4B943 96.71%);
+            color: var(--td-white);
+          }
+          &:after {
+            content: "\f078" !important;
+            background-image: none;
+          }
+          .accordion-body {
+            background: var(--td-white);
+          }
+        }
+        &::after {
+          position: absolute;
+          inset-inline-end: 20px;
+          content: "\f077";
+          font-family: var(--td-ff-fontawesome);
+          font-size: 16px;
+          font-weight: 900;
+          text-align: center;
+          top: 50%; 
+          @include border-radius(50%);
+          transform: translateY(-50%);
+          @include inline-flex();
+          align-items: center;
+          justify-content: center;
+          background-image: none;
+          @media #{$xs} {
+            inset-inline-end: 20px;
+          }
+        }
+        .count {
+          width: 50px;
+          height: 50px;
+          background: #FBF1F0;
+          border-radius: 50px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 auto;
+          color: var(--td-heading);
+          @media #{$xs} {
+            width: 34px;
+            height: 34px;
+            font-size: 14px;
+          }
+        }
+      }
+      .accordion-body {
+        padding-inline-start: 20px;
+        padding-inline-end: 20px;
+        background: transparent;
+        padding-bottom: 25px;
+        border-radius: 0px;
+        padding-top: 10px;
+        @media #{$xxs} {
+          padding-inline-start: 20px;
+          padding-inline-end: 20px;
+        }
+        p {
+          font-size: 16px;
+          margin-inline-start: 62px;
+          position: relative;
+          padding-inline-start: 30px;
+          @media #{$xs} {
+            margin-inline-start: 15px;
+            position: relative;
+            padding-inline-start: 25px;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 1px;
+            background-color: #BFBFBF;
+            top: 0;
+            inset-inline-start: 0;
+          }
+        }
+        .accordion-body-list {
+          margin-top: 14px;
+          ul {
+            li {
+              &:not(:last-child) {
+                margin-bottom: 7px;
+              }
+            }
+          }
+        }
+      }
+      .accordion-item {
+        background: transparent;
+        box-shadow: none;
+        border: 1px solid var(--td-border-primary);
+        border-radius: 18px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+        &:last-of-type {
+          &>.accordion-collapse {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+        &:first-of-type {
+          .accordion-button {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+          }
+        }
+        &.active {
+          position: relative;
+          border-color: transparent;
+          &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            @include border-radius(18px);
+            padding: 1px;
+            background: linear-gradient(303deg,rgba($white, $alpha: 0) 0%,rgba(255, 255, 255, 0.43) 100%);
+            background: linear-gradient(137.02deg,rgba(255, 126, 66, 1) 0%,rgba(244, 185, 67, 1) 100%);
+            -webkit-mask: linear-gradient(var(--td-white) 0 0) content-box, linear-gradient(var(--td-white) 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
+.accordion-collapse {
+	&.collapse {
+		&.show {
+			box-shadow: 0px 36px 75px -4px rgba(19, 8, 4, 0.08);
+			border-radius: 18px;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Header auth Styles
+/*----------------------------------------*/
+.header-area {
+    &.header-style-one {
+        &.auth-header {
+            background: var(--td-cetacean-blue-2);
+        }
+    }
+}

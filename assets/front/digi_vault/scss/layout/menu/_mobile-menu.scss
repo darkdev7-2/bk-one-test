@@ -1,0 +1,98 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.3 Mobile menu css
+/*----------------------------------------*/
+.td-offcanvas-menu {
+	margin-bottom: 30px;
+
+	ul {
+		list-style: none;
+
+		li {
+			position: relative;
+
+			&>a {
+				padding: 12px 0;
+				display: block;
+				font-size: 15px;
+				font-weight: 500;
+				color: var(--td-white);
+				font-family: var(--td-ff-heading);
+			}
+
+			&:not(:last-child) {
+				&>a {
+					border-bottom: 1px solid rgba($white, $alpha: 0.2);
+				}
+			}
+
+			&.active {
+				&>a {
+					color: var(--td-primary-hover);
+				}
+
+				&>.tp-menu-close {
+					color: var(--td-white);
+					background: var(--td-black);
+					border-color: var(--td-black);
+
+					i {
+						-webkit-transform: rotate(90deg);
+						-moz-transform: rotate(90deg);
+						-ms-transform: rotate(90deg);
+						-o-transform: rotate(90deg);
+						transform: rotate(90deg);
+					}
+				}
+			}
+
+			.td-dp-menu {
+				display: none;
+				padding-inline-start: 20px;
+			}
+		}
+	}
+
+	.td-mega-menu {
+		padding: 0;
+		padding-top: 30px;
+		box-shadow: none;
+		transform: inherit;
+	}
+}
+
+.tp-menu-close {
+	position: absolute;
+	inset-inline-end: 0;
+	top: 6px;
+	height: 30px;
+	width: 30px;
+	font-size: 12px;
+	line-height: 29px;
+	text-align: center;
+	border: 1px solid rgba(1, 15, 28, 0.12);
+
+	i {
+		transition: all 0.3s;
+	}
+}
+
+.td-mega-menu {
+	position: absolute;
+	top: 100%;
+	inset-inline-start: 0;
+	inset-inline-end: 0;
+	opacity: 0;
+	width: 100%;
+	z-index: 99;
+	margin: 0 auto;
+	background: var(--td-white);
+	visibility: hidden;
+	transform-origin: top;
+	transition: 0.4s;
+	transition-duration: 0.1s;
+	padding: 30px 30px 10px 30px;
+	transform: perspective(300px) rotateX(-18deg);
+	box-shadow: 0px 10px 30px 0px rgba(25, 25, 26, 0.1);
+}

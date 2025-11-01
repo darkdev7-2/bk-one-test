@@ -1,0 +1,23 @@
+{
+    "name": "remotelywork/installer",
+    "description": "Official Script Installer Of tDevs",
+    "type": "library",
+    "version": "1.0",
+    "autoload": {
+        "psr-4": {
+            "Remotelywork\\Installer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tDevs"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Remotelywork\\Installer\\InstallerServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Work process css
+/*----------------------------------------*/
+.work-process-main {
+    position: relative;
+}
+.work-process-item {
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8.5px);
+    border-radius: 20px;
+    padding: 30px 30px;
+    position: relative;
+    @media #{$xl} {
+        padding: 25px 25px;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        @include border-radius(20px);
+        padding: 1px;
+        background: linear-gradient(148.93deg,rgba(204, 204, 204, 0.68) 0%,rgba(143, 143, 143, 0.78) 100%);
+        -webkit-mask: linear-gradient(var(--td-white) 0 0) content-box, linear-gradient(var(--td-white) 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: -1;
+    }
+    .icon {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 243, 237, 0.24);
+        box-shadow: 0px 15px 35px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 54.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        @media #{$xs} {
+            width: 80px;
+            height: 80px;
+        }
+        span {
+            max-width: 58px;
+            @media #{$xs} {
+                max-width: 34px;
+            }
+        }
+    }
+    .content {
+        .title {
+            margin-bottom: 20px;
+            color: var(--td-white);
+            font-size: 26px;
+            @media #{$xl} {
+                font-size: 22px;
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        .description {
+            color: var(--td-white);
+        }
+    }
+}
+.work-process-main {
+	.row {
+		[class*=col-]:nth-child(2),:nth-child(3) {
+            .work-process-item {
+                margin-top: 200px;
+                @media #{$xs,$sm,$md} {
+                    margin-top: 0;
+                }
+            }
+		}
+	}
+}
+.process-intro-logo {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    width: 111px;
+    height: 111px;
+    background: #38444D;
+    border-radius: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @media #{$xs,$sm,$md} {
+        position: inherit;
+        margin-bottom: 40px;
+    }
+    span {
+        width: 91px;
+        height: 91px;
+        background: var(--td-white);
+        border-radius: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

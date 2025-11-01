@@ -1,0 +1,21 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Investors styles
+/*----------------------------------------*/
+.investors-shapes {
+    .glow {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        z-index: -1;
+    }
+
+    .line {
+        position: absolute;
+        top: -38%;
+        left: 0;
+        z-index: -4;
+        width: 100%;
+    }
+}

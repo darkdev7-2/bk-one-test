@@ -1,0 +1,128 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Shortcodes
+/*----------------------------------------*/
+.text-body {
+	color: var(--td-heading);
+}
+.text-white {
+	color: var(--td-white);
+}
+.text-black {
+	color: var(--td-black);
+}
+.text-primary {
+	color: var(--td-primary);
+}
+.text-heading {
+	color: var(--td-heading) !important;
+}
+.text-secondary {
+	color: var(--td-secondary);
+}
+.text-quaternary {
+	color: var(--td-tertiary);
+}
+.primary-text {
+	color: var(--td-text-primary) !important;
+}
+
+// Border radius
+.radius-4 {
+	@include border-radius(4px);
+}
+.radius-5 {
+	@include border-radius(5px);
+}
+.radius-8 {
+	@include border-radius(8px);
+}
+.radius-10 {
+	@include border-radius(10px);
+}
+.radius-20 {
+	@include border-radius(20px);
+}
+.radius-30 {
+	@include border-radius(30px);
+}
+.radius-40 {
+	@include border-radius(40px);
+}
+.radius-45 {
+	@include border-radius(45px);
+}
+.radius-50 {
+	@include border-radius(50px);
+}
+.radius-60 {
+	@include border-radius(60px);
+}
+
+// Font Family 
+.title-font {
+	font-family: var(--td-ff-title);
+}
+// font weight
+.fw-3 {
+	font-weight: var(--td-fw-light);
+}
+.fw-4 {
+	font-weight: var(--td-fw-regular);
+}
+.fw-5 {
+	font-weight: var(--td-fw-medium);
+}
+.fw-6 {
+	font-weight: var(--td-fw-sbold);
+}
+.fw-7 {
+	font-weight: var(--td-fw-bold);
+}
+.fw-8 {
+	font-weight: var(--td-fw-ebold);
+}
+.fw-9 {
+	font-weight: var(--td-fw-black);
+}
+
+// gap 
+.gap--5{
+	gap: 5px;
+}
+.gap-10 {
+	gap: 10px;
+}
+.gap-15 {
+	gap: 15px;
+}
+.gap-20 {
+	gap: 20px;
+}
+.gap-24 {
+	gap: 24px;
+}
+
+// Font size
+.fs-10 {
+	font-size: 10px;
+} 
+.fs-11 {
+	font-size: 11px;
+} 
+.fs-12 {
+	font-size: 12px;
+} 
+.fs-13 {
+	font-size: 13px;
+} 
+.fs-14 {
+	font-size: 14px;
+} 
+.fs-15 {
+	font-size: 15px;
+} 
+.fs-16 {
+	font-size: 16px;
+} 

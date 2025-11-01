@@ -1,0 +1,24 @@
+@use '../utils' as u;
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Our solutions css
+/*----------------------------------------*/
+.our-solutions-item {
+    text-align: center;
+    max-width: 321px;
+    margin: 0 auto;
+    text-align: center;
+}
+.our-solutions-icon {
+    margin-bottom: 35px;
+}
+.our-solutions-content {
+    .title {
+        font-size: 26px;
+        margin-bottom: 20px;
+        @media #{$xs} {
+            font-size: 20px;
+        }
+    }
+}

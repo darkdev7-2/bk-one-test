@@ -1,0 +1,43 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  banner css
+/*----------------------------------------*/
+.sponsor-main-wrapper {
+    position: relative;
+    margin-top: -56px;
+}
+.sponsor_active {
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+.sponsor-item-grid {
+    background: var(--td-white);
+    box-shadow: 0px 299px 500px rgba(7, 20, 60, 0.0363503), 0px 66.7856px 111.682px rgba(7, 20, 60, 0.0436), 0px 19.8838px 33.2505px rgba(7, 20, 60, 0.06);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 45px 45px;
+    position: relative;
+    margin-top: 7px;
+    overflow: hidden;
+    @include dark {
+        background-color: #415C68;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 100%;
+        top: 0;
+        inset-inline-start: 0;
+        background: var(--td-primary);
+        border-radius: 24px 24px 0px 0px;
+    }
+}
+.sponsor-item {
+    text-align: center;
+}
+.sponsor-thumb {
+    max-width: 180px;
+}

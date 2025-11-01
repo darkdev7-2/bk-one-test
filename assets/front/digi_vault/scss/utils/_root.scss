@@ -1,0 +1,66 @@
+:root {
+  // font family declaration
+  --td-ff-body: "IBM Plex Sans", serif;
+  --td-ff-heading: "Manrope", serif;
+
+  // color declaration
+
+  // Common Color
+  --td-white: hsl(0, 0%, 100%);
+  --td-always-white: hsl(0, 0%, 100%);
+  --td-black: hsl(0, 0%, 0%);
+  --td-black-alt: #030303;
+  --td-placeholder: hsla(0, 0%, 0%, 0.5);
+  --td-selection: hsl(0, 0%, 0%);
+
+  // Heading Color
+  --td-heading: #222222;
+
+  // Theme Color
+  --td-primary: #258CF4;
+  --td-primary-alt: #F425F4;
+  --td-primary-hover: #A1F425;
+
+  // Text Color
+  --td-text-primary: #5F7D95;
+  --td-text-p: rgba(95, 125, 149, 1);
+
+  // Border Color
+  --td-border-primary: #eaeaea;
+
+  // Others Color
+  --td-yellow: #ffa336;
+  --td-warning: #FFA336;
+  --td-success: #00a67e;
+  --td-danger: #d14249;
+  --td-green: #80ED99;
+  --td-gary: #f5f5f5;
+  --td-cetacean-blue: #150136;
+  --td-cetacean-blue-2: #1a0047;
+  --td-azure: #008EFF;
+  --td-anti-flash: #F3EFFA;
+  --td-alice-blue: #F1F7FF;
+  --td-ghost-white: #FEF6FF;
+
+  //font weight declaration
+  --td-fw-normal: normal;
+  --td-fw-thin: 100;
+  --td-fw-elight: 200;
+  --td-fw-light: 300;
+  --td-fw-regular: 400;
+  --td-fw-medium: 500;
+  --td-fw-sbold: 600;
+  --td-fw-bold: 700;
+  --td-fw-ebold: 800;
+  --td-fw-black: 900;
+
+  // font size declaration
+  --td-fs-body: 16px;
+  --td-fs-p: 16px;
+  --td-fs-h1: 52px;
+  --td-fs-h2: 42px;
+  --td-fs-h3: 32px;
+  --td-fs-h4: 24px;
+  --td-fs-h5: 20px;
+  --td-fs-h6: 16px;
+}

@@ -1,0 +1,85 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Postbox css
+/*----------------------------------------*/
+// postbox style
+.postbox-wrapper {
+	@media #{$xs, $sm, $md, $lg} {
+	  padding-inline-start: 0;
+	}
+}
+.postbox-text {
+	p {
+		font-size: 18px;
+		line-height: 26px;
+		&.first-description {
+			&:first-letter {
+				font-size: 50px;
+				@media #{$xs,$sm,$md,$lg} {
+					font-size: 38px;
+				}
+			  }
+		}
+		@media #{$xs,$sm,$md,$lg} {
+			font-size: 16px;
+		}
+		b {
+			font-weight: 700;
+		}
+	}
+}
+.postbox-thumb-grid {
+	display: grid;
+	grid-template-columns: 62% auto;
+	gap: 30px 30px;
+	@media #{$sm,$md,$lg,$xl,$x3l} {
+	  grid-template-columns: 63.5% auto;
+	}
+	@media #{$xs} {
+	  grid-template-columns: 1fr;
+	}
+  }
+.postbox-thumb {
+	img {
+		border-radius: 10px;
+	}
+}
+.postbox-title {
+	h3 {
+		font-size: 25px;
+		margin-bottom: 18px;
+		@media #{$xl,$lg} {
+			font-size: 26px;
+		}
+		@media #{$md} {
+			font-size: 26px;
+		}
+		@media #{$sm} {
+			font-size: 24px;
+		}
+		@media #{$xs} {
+			font-size: 22px;
+		}
+		@media #{$xxs} {
+			font-size: 20px;
+		}
+	}
+}
+.sidebar-wrapper {
+    padding: 25px 30px 30px;
+    background: rgba($white, $alpha: 0.08);
+    border: 1px solid rgba($white, $alpha: 0.08);
+    border-radius: 10px;
+	@media #{$xxs,$lg} {
+		padding: 20px 20px;
+	}
+}
+.sidebar-widget-title {
+	margin-bottom: 25px;
+	color: var(--td-white);
+	font-size: 22px;
+	@media #{$xxs} {
+		font-size: 20px;
+	}
+}

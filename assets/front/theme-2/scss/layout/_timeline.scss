@@ -1,0 +1,171 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Timeline css
+/*----------------------------------------*/
+.work-timeline-grid {
+    max-width: calc(1020px - 30px);
+    margin: 0 auto;
+}
+.work-timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 0px;
+    gap: 30px 307px;
+    margin: 0 auto;
+	@media #{$md} {
+        gap: 30px 130px;
+	}
+	@media #{$xs,$sm} {
+		flex-direction: column;
+		padding-top: 100px;
+	}
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+		@media #{$xs,$sm} {
+			flex-direction: column;
+		}
+	}
+	&:not(:last-child) {
+		padding-bottom: 80px;
+		@media #{$xxl,$x3l} {
+			padding-bottom: 120px;
+		}
+		@media #{$xl,$lg,$md} {
+			padding-bottom: 100px;
+		}
+		@media #{$xs,$sm} {
+			padding-bottom: 50px;
+		}
+	}
+	&::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        border: 5px solid #E2E2E2;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+		@include dark {
+			border-color: #415C68;
+		}
+		@media #{$xs,$sm} {
+			display: none;
+		}
+	}
+	.content {
+        max-width: 400px;
+        background: var(--td-white);
+        box-shadow: 0px 36px 75px -4px rgba(19, 8, 4, 0.08);
+        border-radius: 18px;
+        padding: 40px 40px;
+        position: relative;
+        z-index: 1;
+		@include dark {
+			background: rgba(255, 255, 255, 0.16);
+		}
+		@media #{$xs,$sm,$md} {
+            padding: 30px 30px;
+		}
+		@media #{$xxs} {
+            padding: 30px 20px;
+		}
+        &::before {
+            position: absolute;
+            content: "";
+            inset: 0;
+            @include border-radius(20px);
+            padding: 1px;
+            -webkit-mask: linear-gradient(var(--td-white) 0 0) content-box, linear-gradient(var(--td-white) 0 0);
+            -webkit-mask-composite: xor;
+            background: linear-gradient(135.52deg, rgba(255, 126, 66, 1) 0%, rgba(244, 185, 67, 1) 100%);
+            mask-composite: exclude;
+            z-index: -1;
+        }
+		@media #{$lg} {
+			max-width: 400px;
+		}
+		@media #{$md} {
+            max-width: 310px;
+		}
+		.title {
+			font-size: 26px;
+			margin-bottom: 30px;
+            padding-bottom: 25px;
+            position: relative;
+            @media #{$md} {
+				font-size: 20px;
+			}
+			@media #{$sm} {
+				font-size: 24px;
+			}
+			@media #{$xs} {
+				font-size: 20px;
+			}
+			@media #{$xxs} {
+				font-size: 18px;
+			}
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100px;
+                background-color: var(--td-primary);
+                bottom: 0;
+                inset-inline-start: 0;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 100%;
+                bottom: 0;
+                opacity: 0.25;
+                border: 1.5px solid var(--td-primary);
+                inset-inline-start: 0;
+            }
+		}
+		.description {
+			margin-bottom: 0;
+		}
+	}
+	.timeline-thumb {
+        max-width: 190px;
+        margin: 0 auto;
+		@media #{$sm} {
+			max-width: 160px;
+		}
+		@media #{$xs} {
+			max-width: 120px;
+		}
+		img {
+			border-radius: 10px;
+		}
+	}
+	.timeline-count {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		.number {
+            width: 65px;
+            height: 65px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(137.02deg, var(--td-primary) 0%, var(--golden-glam) 96.71%);
+            box-shadow: 0px 12px 24px rgba(255, 126, 66, 0.23);
+            color: var(--td-white);
+			@media #{$xs,$sm,$md} {
+				width: 50px;
+				height: 50px;
+				font-size: 20px;
+			}
+		}
+	}
+}

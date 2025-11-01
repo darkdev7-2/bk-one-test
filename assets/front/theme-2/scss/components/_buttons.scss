@@ -1,0 +1,110 @@
+@use "../utils" as *;
+
+/*---------------------------------
+/*  Button styles
+---------------------------------*/
+.btn-wrap {
+	@include flexbox();
+	align-items: center;
+	gap: 15px 15px;
+	flex-wrap: wrap;
+}
+.site-btn {
+	height: 54px;
+	@include inline-flex();
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 10px 30px;
+	@include border-radius(16px);
+	color: $black;
+	background: var(--td-white);
+	font-weight: 600;
+	font-size: 18px;
+	&.gdt-btn {
+		background: linear-gradient(154.73deg, var(--td-primary) -1.83%, var(--golden-glam) 138.32%);
+		box-shadow: 0px 18px 30px -2px rgba(19, 8, 4, 0.11);
+		color: var(--td-white);
+		.btn-hover-slide {
+			&::before {
+				background: #64148A;
+			}
+		}
+	}
+	&.gray-btn {
+		background: rgba(88, 88, 88, 0.13);
+		color: var(--td-heading);
+	}
+	&.peach-breeze-btn {
+		background: #FFEEE6;
+		border-radius: 12px;
+		color: var(--td-primary);
+		&:hover {
+			color: var(--td-white);
+			background-color: var(--td-primary);
+		}
+	}
+	&.aare-river {
+		background-color: #00c09d;
+		border: 1px solid #00ab8c;
+		box-shadow: 0 2px 4px 0 rgba(87, 71, 81, .2);
+		color: var(--td-white);
+		&:hover {
+			background-color: #2ca893;
+			transition: all .2s ease-out;
+		}
+	}
+	@media #{$xs} {
+		height: 46px;
+		font-size: 14px;
+		padding: 0 25px;
+		span {
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}
+.link-btn {
+    width: 60px;
+    height: 60px;
+    background: rgba(88, 88, 88, 0.13);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	span {
+		&:last-child {
+			display: none;
+		}
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		inset: 0;
+		z-index: -1;
+		border-radius: inherit;
+		background-image: linear-gradient(90deg, var(--td-primary) 21%, #ee9558 50%, var(--golden-glam) 80%);
+		background-size: 250%;
+		background-position: left;
+		transition: all .5s ease;
+		opacity: 0;
+		z-index: -1;
+	}
+	&:hover {
+		span {
+			&:first-child {
+				display: none;
+			}
+			&:last-child {
+				display: block;
+			}
+		}
+		&::before {
+			opacity: 1;
+		}
+	}
+}

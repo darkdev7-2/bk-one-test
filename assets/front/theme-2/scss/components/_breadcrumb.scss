@@ -1,0 +1,159 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/* Breadcrumb style
+/*----------------------------------------*/
+.breadcrumb-space {
+  padding: 170px 0 80px;
+  min-height: 390px;
+  @media #{$xs,$sm,$md} {
+    padding: 120px 0 100px;
+    min-height: 360px;
+  }
+}
+.breadcrumb-overlay {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.breadcrumb-content {
+  .td-breadcrumb-menu {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    display: inline-block;
+    padding: 2px 15px 4px;
+    margin-bottom: 20px;
+    nav {
+      ul {
+        @include inline-flex();
+        gap: 10px 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          list-style: none;
+          position: relative;
+          line-height: 1;
+          color: #C8C8C8;
+          &:not(:nth-child(1)) {
+            &::before {
+              display: inline-block;
+              content: "\f324";
+              position: absolute;
+              top: calc(50% + 2px);
+              inset-inline-start: -19px;
+              font-size: 12px;
+              color: rgba($white, $alpha: 0.6);
+              font-family: var(--td-ff-fontawesome);
+              top: 50%; 
+            }
+          }
+          &:last-child {
+            color: $white;
+            &::before {
+              color: rgba($white, $alpha: 1);
+            }
+          }
+          &.active {
+            span {
+              color: var(--td-primary);
+            }
+          }
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+            a {
+              font-weight: var(--td-fw-medium);
+              &:hover {
+                color: var(--td-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb-title {
+    font-size: 55px;
+    color: var(--td-white);
+    @media #{$md, $lg} {
+      font-size: 36px;
+    }
+    @media #{$sm} {
+      font-size: 34px;
+    }
+    @media #{$xs} {
+      font-size: 32px;
+    }
+    @media #{$xxs} {
+      font-size: 30px;
+    }
+  }
+  > {
+    .description {
+      color: #C8C8C8;
+      font-weight: 400;
+      max-width: 624px;
+    }
+  }
+}
+
+.breadcrumb-gallery-wrapper {
+  @include transform(rotate(30deg));
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  z-index: -1;
+  @media #{$x3l,$xxl} {
+    top: 50px;
+    width: 55%;
+  }
+  @media #{$xl} {
+    top: 5%;
+    width: 55%;
+  }
+  @media #{$lg} {
+    width: 40%;
+  }
+  @media #{$xs,$sm,$md} {
+    transform: inherit;
+    position: inherit;
+  }
+  @include rtl {
+    @include transform(rotate(335deg));
+  }
+  .breadcrumb-thumb {
+    &:nth-child(1) {
+      transform: translateY(-42%);
+      @media #{$xs,$sm,$md,$lg} {
+        transform: translateY(0px);
+      }
+    }
+    &:nth-child(2) {
+      transform: translateY(-16%);
+      @media #{$xs,$sm,$md,$lg} {
+        transform: translateY(0px);
+      }
+    }
+    &:nth-child(3) {
+      transform: translateY(-30%);
+      @media #{$xs,$sm,$md,$lg} {
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+.breadcrumb-pattern {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}

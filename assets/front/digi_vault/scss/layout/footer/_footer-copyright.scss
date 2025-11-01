@@ -1,0 +1,48 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Footer copyright styles
+/*----------------------------------------*/
+.footer-copyright {
+  padding: 20px 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(18, 18, 18, 1) 0%, rgba(46, 46, 46, 1) 51.99999809265137%, rgba(18, 18, 18, 1) 100%);
+  }
+}
+
+.copyright-link {
+  ul {
+    @include flexbox();
+    gap: 10px;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+
+      a {
+        font-size: 14px;
+        color: rgba($white, $alpha: 0.8);
+
+        &:hover {
+          color: var(--td-primary-hover);
+        }
+      }
+    }
+  }
+}
+
+.copyright-text {
+  p {
+    font-size: 14px;
+    color: rgba($white, $alpha: 0.6);
+    font-family: var(--td-ff-heading);
+    font-weight: 400;
+  }
+}

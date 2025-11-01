@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  Background Css
+/*----------------------------------------*/
+
+.white-bg {
+  background-color: var(--td-white);
+}
+.black-bg {
+  background-color: var(--td-black);
+}
+
+// Theme bg
+.theme-bg {
+  background-color: var(--td-bg-primary);
+}
+.theme-bg-secondary {
+  background-color: var(--td-bg-secondary);
+}
+.warning-bg {
+  background-color: var(--td-tertiary);
+}
+.bg-sugar-milk {
+  background-color: var(--td-sugar-milk);
+  @include dark {
+    background-color: #1b2f38;
+  }
+}
+.bg-forsythia-bud {
+  background-color: var(--td-forsythia-bud);
+}

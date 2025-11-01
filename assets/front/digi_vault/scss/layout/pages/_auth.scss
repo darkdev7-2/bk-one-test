@@ -1,0 +1,103 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Authentication css
+/*----------------------------------------*/
+.td-authentication-section {
+	padding: 80px 0;
+
+	@media #{$sm,$md} {
+		padding: 60px 0;
+	}
+
+	@media #{$xs} {
+		padding: 60px 0;
+	}
+
+	@media #{$xxs} {
+		padding: 50px 0;
+	}
+}
+
+.auth-from-main {
+	padding: 30px;
+	background-color: var(--td-white);
+	border-radius: 16px;
+	max-width: 532px;
+	margin: 0 auto;
+	box-shadow: 0px 30px 60px rgba(3, 4, 28, 0.1);
+
+	@media #{$xxs} {
+		padding: 20px;
+	}
+}
+
+.auth-intro-content {
+	.title {
+		font-size: 30px;
+		margin-bottom: 25px;
+
+		@media #{$lg,$md,$sm} {
+			font-size: 36px;
+		}
+
+		@media #{$xs} {
+			font-size: 28px;
+		}
+	}
+
+	.back-previous {
+		margin-bottom: 16px;
+	}
+}
+
+.auth-login-option {
+	@include flexbox();
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 35px;
+	margin-top: 16px;
+}
+
+.auth-divide {
+	-moz-box-align: center;
+	align-items: center;
+	display: -moz-box;
+	@include flexbox();
+	padding: 27px 0 27px;
+
+	.divider-line {
+		border-top: 1px solid rgba($black, $alpha: .1);
+		-moz-box-flex: 1;
+		flex-grow: 1;
+		height: 0;
+	}
+
+	.or {
+		cursor: default;
+		flex-shrink: 0;
+		font-size: 16px;
+		margin-inline-start: 10px;
+		margin-inline-end: 10px;
+		font-weight: 500;
+	}
+}
+
+.auth-privacy-policy {
+	margin-top: 35px;
+
+	.description {
+		color: var(--td-heading);
+
+		span {
+			padding: 0 5px;
+		}
+	}
+}
+
+.auth-account {
+	.description {
+		color: var(--td-heading);
+	}
+}

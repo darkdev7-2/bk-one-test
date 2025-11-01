@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Badge
+/*----------------------------------------*/e
+.td-badge {
+    font-size: 14px;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 6px 15px;
+    color: var(--td-heading);
+    line-height: 1;
+    text-align: center;
+    background-color: var(--td-white);
+	&.primary {
+		background: var(--td-primary);
+		color: var(--td-white);
+	}
+	&.warning {
+		background: var(--td-tertiary);
+		color: var(--td-white);
+	}
+	&.danger {
+		color: var(--td-white);
+		background: var(--td-bg-danger);
+	}
+	&.success {
+		color: var(--td-white);
+		background: var(--td-bg-success);
+	}
+	&.black {
+		color: var(--td-white);
+		background: var(--td-black);
+	}
+}

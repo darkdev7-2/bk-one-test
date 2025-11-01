@@ -1,0 +1,202 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Offcanvas
+/*----------------------------------------*/
+.offcanvas-area {
+    background: $white none repeat scroll 0 0;
+    position: fixed;
+    right:0;
+    top: 0;
+    width: 360px;
+    height: 100%;
+    -webkit-transform: translateX(calc(100% + 80px));
+    -moz-transform: translateX(calc(100% + 80px));
+    -ms-transform: translateX(calc(100% + 80px));
+    -o-transform: translateX(calc(100% + 80px));
+    transform: translateX(calc(100% + 80px));
+    -webkit-transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+    -moz-transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+    transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+    z-index: 999;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+    @include dark {
+        background-color: #1b2f38;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: 360px) {
+        width: 100%;
+    }
+    &.info-open {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.offcanvas-logo {
+    a {
+        img {
+            height: 50px;
+            width: auto;
+        }
+    }
+    .offcanvas-white-logo {
+        display: none;
+        @include dark {
+            display: block;
+        }
+    }
+    .offcanvas-dark-logo {
+        display: block;
+        @include dark {
+            display: none;
+        }
+    }
+}
+.offcanvas-content {
+    padding-bottom: 45px;
+}
+.offcanva-wrapper {
+    position: relative;
+    height: 100%;
+    padding: 30px 30px;
+    @media #{$xxs} {
+        padding: 30px 20px;
+    }
+}
+.offcanvas-top {
+    padding-bottom: 20px;
+}
+.offcanvas-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    @media #{$xxs} {
+        font-size: 20px;
+    }
+}
+.offcanvas-text {
+    & p {
+        margin-bottom: 25px;
+    }
+}
+.offcanvas-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $black;
+    z-index: 900;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    inset-inline-end: 0;
+    transition: .3s;
+    &.overlay-open {
+        opacity: 0.6;
+        visibility: visible;
+    }
+}
+.sidebar-toggle {
+    cursor: pointer;
+}
+.offcanvas-contact-icon {
+    margin-inline-end: 15px;
+}
+.offcanvas-header-btns {
+    .site-btn {
+        height: 46px;
+        font-size: 14px;
+        padding: 0px 25px;
+        gap: 6px;
+        &.gray-btn {
+            background-color: #415C68;
+            color: var(--td-white);
+            svg * {
+                fill: var(--td-white);
+            }
+        }
+        span {
+			svg {
+				width: 16px;
+				height: 16px;
+			}
+		}
+    }
+}
+.offcanvas-btn {
+    @include flexbox();
+    gap: 15px;
+}
+// Close icon 
+.offcanvas-close-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 44px;
+    width: 44px;
+    line-height: 40px;
+    border: 2px solid var(--td-border-primary);
+    background-color: transparent;
+    color: var(--tp-text-1);
+    border-radius: 50%;
+    svg * {
+        @include dark {
+            stroke: var(--td-white);
+        }
+    }
+    &:hover {
+        background-color: var(--td-primary);
+        color: var(--td-white);
+        border-color: transparent;
+    }
+}
+
+.offcanvas-contact{
+    margin-bottom: 35px;
+    @media #{$lg} {
+        border-top: 1px solid var(--td-border-primary);
+        padding-top: 25px;
+        margin-top: 5px;
+    }
+     ul{
+        & li{
+            margin-bottom: 2px;
+            list-style: none;
+            a{
+                position: relative;
+                font-size: 18px;
+                color: #414144;
+                display: inline-block;
+                @include dark {
+                    color: var(--td-text-secondary);
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    left: auto;
+                    right: 0;
+                    bottom: 0px;
+                    opacity: 0;
+                    background-color: currentColor;
+                    transition: all 0.3s linear;
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                        width: 100%;
+                        left: 0;
+                        right: auto;
+                        transition: all 0.2s linear;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return #{math.div($pixel, 16)}rem; // Use interpolation to add "rem" properly
+  }
+
+  @else {
+    @error "Don't use units when using the rem() function; only numbers.";
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return #{math.div($pixel, 16)}em; // Use interpolation to add "em" properly
+  }
+
+  @else {
+    @error "Don't use units when using the em() function; only numbers.";
+  }
+}
+
+// Function to generate margin and padding classes
+@mixin spacing-generator($property, $css-property) {
+  @for $i from 1 through 200 {
+    .#{$property}t-#{$i} {
+      #{$css-property}-top: #{$i}px;
+    }
+
+    .#{$property}b-#{$i} {
+      #{$css-property}-bottom: #{$i}px;
+    }
+
+    .#{$property}l-#{$i} {
+      #{$css-property}-inline-start: #{$i}px;
+    }
+
+    .#{$property}r-#{$i} {
+      #{$css-property}-inline-end: #{$i}px;
+    }
+  }
+}
+
+// Generate margin classes with logical properties
+@include spacing-generator("m", "margin"); // Outputs classes like mt-1, mb-1, ml-1, etc., using logical properties.
+
+// Generate padding classes with logical properties
+@include spacing-generator("p", "padding"); // Outputs classes like pt-1, pb-1, pl-1, etc., using logical properties.
+

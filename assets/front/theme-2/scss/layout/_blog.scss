@@ -1,0 +1,63 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Blog style
+/*----------------------------------------*/
+.single-blog-item {
+  background: var(--td-white);
+  border: 1px solid var(--td-border-primary);
+  border-radius: 19px;
+  padding: 20px 20px;
+  @include dark {
+    background-color: #415C68;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .blog-thumb {
+    margin-bottom: 28px;
+    overflow: hidden;
+    img {
+      border-radius: 16px;
+      width: 100%;
+    }
+  }
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    @media #{$xs} {
+      gap: 12px 14px;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--td-text-primary);
+      @include dark {
+        color: var(--td-text-secondary);
+      }
+      svg * {
+        fill: #c3c3c3;
+      }
+    }
+  }
+  .blog-content {
+    .title {
+      margin-bottom: 15px;
+      font-size: 24px;
+      @media #{$xs} {
+        font-size: 22px;
+      }
+      @media #{$xxs} {
+        font-size: 20px;
+      }
+      a {
+        &:hover {
+          color: var(--td-primary);
+        }
+      }
+    }
+  }
+}

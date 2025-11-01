@@ -1,0 +1,83 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Basic pagination styles
+/*----------------------------------------*/
+.td-pagination {
+	ul {
+		@include flexbox();
+		align-items: center;
+		gap: 5px;
+		flex-wrap: wrap;
+
+		@media #{$xs,$sm,$md} {
+			justify-content: start;
+		}
+
+		li {
+			list-style: none;
+
+			a {
+				width: 44px;
+				height: 44px;
+				@include inline-flex();
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				inset-inline-end: 0;
+				top: 50%;
+				font-weight: 500;
+				font-size: 16px;
+				@include border-radius(50%);
+				background: var(--td-anti-flash);
+				border-color: rgba($white, $alpha: 0.08);
+				color: var(--td-heading);
+				z-index: 1;
+
+				&::before {
+					position: absolute;
+					content: "";
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					background: linear-gradient(94.71deg, rgb(37, 140, 244) 0%, rgb(244, 37, 244) 100%);
+					@include border-radius(50%);
+					transition: .3s;
+					opacity: 0;
+					z-index: -1;
+
+				}
+
+				&:hover {
+					border-color: transparent;
+					color: var(--td-white);
+
+					&::before {
+						opacity: 1;
+					}
+				}
+
+				i {
+					font-size: 14px;
+				}
+			}
+
+			.current {
+				width: 44px;
+				height: 44px;
+				@include inline-flex();
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				inset-inline-end: 0;
+				top: 50%;
+				font-weight: 500;
+				font-size: 16px;
+				background: linear-gradient(94.71deg, rgb(37, 140, 244) 0%, rgb(244, 37, 244) 100%);
+				color: var(--td-white);
+				border: 0;
+			}
+		}
+	}
+}

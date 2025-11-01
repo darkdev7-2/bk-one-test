@@ -1,0 +1,115 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Table css
+/*----------------------------------------*/
+
+// common table
+.table-heading {
+    .title {
+        color: varP(--td-pale-cornflower-blue);
+        font-size: 20px;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 12px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: 63%;
+            background: linear-gradient(95.42deg, rgb(108, 115, 255) 0%, rgb(56, 64, 247) 100%);
+            bottom: 0px;
+        }
+    }
+}
+
+.reward-table {
+    .td-table {
+        @media #{$xs,$sm,md} {
+            min-width: 450px;
+        }
+    }
+}
+
+.td-table {
+    width: 100%;
+    border-collapse: separate; // Allows border-radius to work
+    border-spacing: 0; // Removes spacing between table cells
+    font-size: 14px;
+    border: 1px solid rgba($heading, $alpha: 0.2);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+
+    &.has-glow {
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: url(../images/bg/table-glow-01.png) no-repeat bottom left;
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        &:before {
+            background: url(../images/bg/table-glow-02.png) no-repeat top right;
+            border-radius: 7px;
+            z-index: -1;
+        }
+    }
+
+    thead {
+        border-bottom: 1px solid rgba(94, 111, 253, 0.3);
+        @include border-radius(8px);
+        overflow: hidden; // Ensures border-radius applies in Firefox
+
+        span {
+            display: inline-flex;
+        }
+
+        tr {
+            th {
+                border-inline-start: 0;
+                border-inline-end: 0;
+                padding: 10px 16px;
+                text-align: left;
+                font-weight: 500;
+                color: var(--td-heading);
+                font-size: 18px;
+
+                @media #{$xs,$sm,$md} {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: left;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--td-border-primary);
+        font-weight: 600;
+        color: #4a4a4a;
+    }
+
+    td {
+        text-align: left;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--td-border-primary);
+        font-weight: 500;
+    }
+
+    tr {
+        &:last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+}

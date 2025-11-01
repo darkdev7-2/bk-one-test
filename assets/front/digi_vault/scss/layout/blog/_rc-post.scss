@@ -1,0 +1,127 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  Postbox styles
+/*----------------------------------------*/
+
+// Recent post
+.rc-post-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    transition: .3s;
+    border: 1px solid rgba($heading, $alpha: 0.2);
+    border-radius: 8px;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    &:hover {
+        .rc-post-thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .rc-post-content {
+            box-shadow: 0 10px 30px rgba($black, $alpha: 0.1);
+        }
+    }
+}
+
+.rc-post-content {
+    padding: 20px;
+    transition: .3s;
+    border-left: 0;
+    border-radius: 8px;
+
+    @media #{$xs} {
+        padding: 16px;
+    }
+}
+
+.rc-post-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+
+    .meta-info {
+        display: inline-flex;
+        margin-bottom: 5px;
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            svg * {
+                path {
+                    fill: #7a7a7a;
+                }
+            }
+
+            &:not(:first-child) {
+                position: relative;
+                padding-left: 6px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 2px;
+                    height: 2px;
+                    background: rgba($white, $alpha: 0.2);
+                }
+            }
+        }
+    }
+}
+
+.rc-post-title {
+    font-size: 18px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin-bottom: 6px;
+    a {
+        background-image: linear-gradient(87.17deg, rgb(37, 140, 244) 0%, 4.19%, rgb(244, 37, 244) 100% 80.98%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: var(--td-heading);
+    }
+
+    @media #{$xs} {
+        font-size: 16px;
+    }
+
+    & a {
+        &:hover {
+            -webkit-text-fill-color: rgba($black, $alpha: 1);
+        }
+    }
+}
+
+.rc-post-thumb {
+    overflow: hidden;
+    flex: 0 0 auto;
+    border-radius: 8px 0px 0px 8px;
+    & img {
+        width: 166px;
+        height: 146px;
+        object-fit: cover;
+
+        @media #{$xs} {
+            width: 120px;
+            height: 120px;
+        }
+    }
+}

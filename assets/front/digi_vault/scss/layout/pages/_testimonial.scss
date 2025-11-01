@@ -1,0 +1,30 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Our solutions styles
+/*----------------------------------------*/
+.testimonial-item {
+    background: var(--td-white);
+    border-radius: 16px;
+    padding: 30px 30px;
+    @media #{$xxs} {
+        padding: 20px 20px;
+    }
+    .contents {
+        margin-top: 20px;
+    }
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 30px;
+    @media #{$xs,$sm,$md} {
+        grid-template-columns: 1fr;
+    }
+    .single-column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}

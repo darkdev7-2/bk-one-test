@@ -1,0 +1,33 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Alerts Styles
+/*----------------------------------------*/
+.td-alert-success {
+    background: rgba($success, $alpha: 0.1);
+    border-radius: 10px;
+    .btn-close {
+        background-size: 12px;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.td-alert-danger {
+    background: rgba($danger, $alpha: 0.1);
+    border-radius: 10px;
+    .btn-close {
+        background-size: 12px;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.alert.alert-outline.td-alert-danger.alert-outline {
+    height: 46px;
+    background: #FFF1EA;
+    border: 1px solid #FF0101;
+    border-radius: 12px;
+}

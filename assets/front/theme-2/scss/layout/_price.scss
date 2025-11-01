@@ -1,0 +1,255 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Price css
+/*----------------------------------------*/
+.price-main-wrapper {
+    background: var(--td-white);
+    border-radius: 40px;
+    padding: 50px 70px 70px;
+	position: relative;
+	z-index: 2;
+	@include dark {
+		background: hsl(196.12deg 72.04% 18.24%);
+	}
+	@media #{$xl,$sm} {
+		padding: 50px 50px 70px;
+	}
+	@media #{$xs} {
+		padding: 50px 30px 50px;
+	}
+	@media #{$xxs} {
+		padding: 50px 15px 15px;
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		bottom: 45px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: calc(100% - 60px);
+		height: 50%;
+		background: #20293A;
+		border-radius: 33px;
+		z-index: -1;
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+.price-tab-content {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 100px;
+	@media #{$xs,$sm,$md,$lg} {
+		gap: 50px;
+		flex-direction: column;
+		margin-bottom: 60px;
+	}
+	@media #{$xxs} {
+		gap: 30px;
+		flex-direction: column;
+		margin-bottom: 46px;
+	}
+}
+.price-tab-list {
+	&.td-tab {
+		padding: 10px 10px;
+		background: #E9E9E9;
+		border-radius: 57px;
+		@media #{$xs} {
+			border-radius: 24px;
+		}
+		.nav-tabs {
+			gap: 20px 70px;
+			@media #{$xs,$sm,$md} {
+				gap: 16px 16px;
+			}
+			.nav-link {
+				height: 70px;
+				padding: 0 40px;
+				background: var(--td-white);
+				box-shadow: 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+				border-radius: 45.6px;
+				font-size: 24px;
+				color: var(--td-heading);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+				font-weight: 700;
+				@media #{$xl,$lg,$md} {
+					font-size: 20px;
+					gap: 12px;
+				}
+				@media #{$xs,$sm} {
+					height: 50px;
+					font-size: 18px;
+					gap: 10px;
+					padding: 0 20px
+				}
+				.icon {
+					display: none;
+				}
+				&.active {
+					color: var(--td-primary);
+					opacity: 1;
+					.icon {
+						display: block;
+						svg {
+							max-width: 44px;
+							@media #{$xl,$lg,$md} {
+								max-width: 32px;
+							}
+							@media #{$xs,$sm} {
+								max-width: 20px;
+							}
+						}			  
+					}
+				}
+			}
+		}
+	}
+}
+.price-item {
+	background: var(--td-white);
+    box-shadow: -9px 34px 200px 10px rgba(19, 8, 4, 0.2);
+    border-radius: 26px;
+    padding: 40px 40px 40px;
+	@media #{$xl} {
+		padding: 30px 25px 30px
+	}
+	@media #{$xxs} {
+		padding: 20px 20px 20px
+	}
+	&.plan-active {
+		position: relative;
+		z-index: 5;
+		margin-bottom: 15px;
+		&::before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			@include border-radius(26px);
+			padding: 2px;
+			background: linear-gradient(303deg,rgba($white, $alpha: 0) 0%,rgba(255, 255, 255, 0.43) 100%);
+			background: linear-gradient(137.02deg,rgba(255, 126, 66, 1) 0%,rgba(244, 185, 67, 1) 100%);
+			-webkit-mask: linear-gradient(var(--td-white) 0 0) content-box, linear-gradient(var(--td-white) 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+			z-index: -1;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			width: calc(100% - 40px);
+			background: rgba(255, 255, 255, 0.12);
+			border-radius: 22px;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+	}
+}
+.price-heading {
+	margin-bottom: 20px;
+	.title {
+		font-size: 30px;
+		margin-bottom: 5px;
+		color: var(--td-heading);
+		@media #{$xl,$lg,$sm} {
+			font-size: 24px
+		}
+		@media #{$xs} {
+			font-size: 20px
+		}
+	}
+	.description {
+		font-size: 18px;
+		color: var(--td-heading);
+		@media #{$xxl} {
+			font-size: 16px;
+		}
+	}
+}
+.price-value {
+	display: flex;
+    gap: 10px;
+    align-items: center;
+	.title {
+		font-size: 40px;
+		font-weight: 700;
+		color: var(--td-heading);
+		@media #{$xl} {
+			font-size: 30px;
+		}
+		@media #{$sm} {
+			font-size: 28px;
+		}
+		@media #{$md} {
+			font-size: 34px;
+		}
+		@media #{$xs} {
+			font-size: 26px;
+		}
+	}
+	.dollar {
+		font-size: 26px;
+		color: var(--td-heading);
+		@media #{$xs,$lg,$xxl} {
+			font-size: 20px;
+		}
+	}
+	sub {
+		font-size: 20px;
+		@media #{$xs} {
+			font-size: 16px;
+		}
+	}
+}
+.price-list {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	ul {
+		li {
+			list-style: none;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+			.list-item {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				.title {
+					font-size: 18px;
+					font-weight: 500;
+					color: var(--td-heading);
+					@media #{$xl,$lg,$sm,$xs} {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+.row {
+	[class*=col-]:nth-child(2) {
+		.price-item {
+			margin-top: -40px;
+			@media #{$xs,$sm,$md,$lg} {
+				margin-top: 0;
+			}
+			@media #{$xs} {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Price style two
+.pricing-section.style-two {
+	padding-top: 180px;
+}

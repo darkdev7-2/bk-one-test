@@ -1,0 +1,1 @@
+ALTER TABLE `currencies` ADD `rate` DOUBLE NOT NULL AFTER `symbol`;

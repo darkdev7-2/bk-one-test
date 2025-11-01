@@ -1,0 +1,51 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/* Section Title  
+/*----------------------------------------*/
+.gd-text {
+  background: -webkit-linear-gradient(45deg, rgba(255, 126, 66, 1) 0%, rgba(244, 185, 67, 1) 100% 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-subtitle {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--td-white);
+  font-weight: 500;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--td-white) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.4;
+    z-index: -1;
+    top: 0;
+    inset-inline-start: 0;
+  }
+}
+.section-title {
+  font-size: 55px;
+  color: var(--td-heading);
+  @media #{$xxl} {
+    font-size: 48px;
+  }
+  @media #{$xl} {
+    font-size: 44px;
+  }
+  @media #{$lg} {
+    font-size: 40px;
+  }
+  @media #{$md} {
+    font-size: 32px;
+  }
+  @media #{$sm} {
+    font-size: 32px;
+  }
+  @media #{$xs} {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+}

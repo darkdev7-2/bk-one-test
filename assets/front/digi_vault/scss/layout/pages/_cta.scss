@@ -1,0 +1,28 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Cta styles
+/*----------------------------------------*/
+.cta-main-wrapper {
+    .icon {
+        margin-bottom: 20px;
+    }
+
+    .contents {
+        .title {
+            margin-bottom: 16px;
+
+            @media #{$xs,$sm} {
+                font-size: 20px;
+            }
+
+            @media #{$xxs} {
+                font-size: 18px;
+            }
+        }
+
+        .description {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+<!-- Header section start -->
+<header>
+    <div class="header-area header-style-one @if(!Route::is('home')) header-primary @endif header-transparent" id="header-sticky">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-left">
+                    <div class="header-logo">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset(setting('site_logo','global')) }}" alt="logo not found">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-menu d-none d-lg-inline-flex">
+                    <div class="td-main-menu">
+                        <nav class="td-mobile-menu-active">
+                            <ul>
+                                @foreach($navigations as $navigation)
+                                    @if($navigation->page_id == null)
+                                        <li @class([
+                                        'active' => $navigation->url == Request::url()
+                                        ])>
+                                        <a href="{{ $navigation->url }}">{{ $navigation->tname }}</a>
+                                        </li>
+                                    @else
+                                        <li @class([
+                                        'active' => url($navigation->url) == Request::url()
+                                        ])>
+                                        <a href="{{ url($navigation->url) }}">{{ $navigation->tname }}</a>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-quick-actions">
+                        @if(setting('language_switcher'))
+                            @php
+                                $languages = \App\Models\Language::where('status',true)->get();
+                                $current_lang = app()->getLocale();
+                            @endphp
+                        <div class="language-dropdown">
+                            <div class="language-box language-nav">
+                                <div class="translate_wrapper">
+                                    <div class="current_lang">
+                                        <div class="lang"><span class="lang-txt">{{ $languages->where('locale',$current_lang)->value('name') }}</span><svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 1.5L4.5 4.5L1 1.5" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="more_lang">
+                                        @foreach(\App\Models\Language::where('status',true)->get() as $lang)
+                                            @if ($current_lang != $lang->locale)
+                                                <a href="{{ route('language-update',['name'=> $lang->locale]) }}" data-lang="{{$lang->name}}" class="change_lang">
+                                                    <div class="lang selected" data-value="en"><span class="lang-txt">{{$lang->name}}<span> </span></span></div>
+                                                </a>
+                                            @endif
+                                            @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="header-btns-wrap d-none d-md-inline-flex">
+                            @auth('web')
+                                <a class="td-btn gradient-outline-btn btn-sm radius-8" href="{{ route('user.dashboard') }}">
+                              <span class="btn-icon">
+                              </span>
+                                    <span class="btn-text">{{ __('Dashboard') }}</span>
+                                </a>
+                            @else
+                            <a class="td-btn gradient-outline-btn btn-sm radius-8" href="{{ route('login') }}">
+                              <span class="btn-icon">
+                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_268_8842)">
+                                    <path d="M13.4167 6.41669H12.25V5.25002C12.25 5.09531 12.1886 4.94694 12.0792 4.83754C11.9698 4.72815 11.8214 4.66669 11.6667 4.66669C11.512 4.66669 11.3636 4.72815 11.2542 4.83754C11.1448 4.94694 11.0834 5.09531 11.0834 5.25002V6.41669H9.91671C9.762 6.41669 9.61362 6.47815 9.50423 6.58754C9.39483 6.69694 9.33337 6.84531 9.33337 7.00002C9.33337 7.15473 9.39483 7.3031 9.50423 7.4125C9.61362 7.5219 9.762 7.58335 9.91671 7.58335H11.0834V8.75002C11.0834 8.90473 11.1448 9.0531 11.2542 9.1625C11.3636 9.2719 11.512 9.33335 11.6667 9.33335C11.8214 9.33335 11.9698 9.2719 12.0792 9.1625C12.1886 9.0531 12.25 8.90473 12.25 8.75002V7.58335H13.4167C13.5714 7.58335 13.7198 7.5219 13.8292 7.4125C13.9386 7.3031 14 7.15473 14 7.00002C14 6.84531 13.9386 6.69694 13.8292 6.58754C13.7198 6.47815 13.5714 6.41669 13.4167 6.41669Z" fill="white"/>
+                                    <path d="M5.25 7C5.94223 7 6.61892 6.79473 7.1945 6.41014C7.77007 6.02556 8.21867 5.47893 8.48358 4.83939C8.74849 4.19985 8.8178 3.49612 8.68275 2.81719C8.5477 2.13825 8.21436 1.51461 7.72487 1.02513C7.23539 0.535644 6.61175 0.202301 5.93282 0.0672531C5.25388 -0.0677952 4.55015 0.0015165 3.91061 0.266423C3.27107 0.53133 2.72444 0.979934 2.33986 1.55551C1.95527 2.13108 1.75 2.80777 1.75 3.5C1.75093 4.42797 2.11997 5.31768 2.77615 5.97385C3.43233 6.63003 4.32203 6.99907 5.25 7ZM5.25 1.16667C5.71149 1.16667 6.16262 1.30352 6.54633 1.55991C6.93005 1.8163 7.22912 2.18071 7.40572 2.60707C7.58232 3.03343 7.62853 3.50259 7.5385 3.95521C7.44847 4.40783 7.22624 4.82359 6.89992 5.14992C6.57359 5.47624 6.15783 5.69847 5.70521 5.7885C5.25259 5.87853 4.78343 5.83233 4.35707 5.65572C3.93071 5.47912 3.56629 5.18005 3.3099 4.79633C3.05351 4.41262 2.91667 3.96149 2.91667 3.5C2.91667 2.88116 3.1625 2.28767 3.60008 1.85009C4.03767 1.4125 4.63116 1.16667 5.25 1.16667Z" fill="white"/>
+                                    <path d="M5.25 8.16669C3.85809 8.16823 2.52363 8.72185 1.53939 9.70608C0.555163 10.6903 0.001544 12.0248 0 13.4167C0 13.5714 0.0614582 13.7198 0.170854 13.8292C0.280251 13.9386 0.428624 14 0.583333 14C0.738043 14 0.886416 13.9386 0.995812 13.8292C1.10521 13.7198 1.16667 13.5714 1.16667 13.4167C1.16667 12.3337 1.59687 11.2951 2.36265 10.5293C3.12842 9.76356 4.16703 9.33335 5.25 9.33335C6.33297 9.33335 7.37158 9.76356 8.13735 10.5293C8.90313 11.2951 9.33333 12.3337 9.33333 13.4167C9.33333 13.5714 9.39479 13.7198 9.50419 13.8292C9.61358 13.9386 9.76196 14 9.91667 14C10.0714 14 10.2197 13.9386 10.3291 13.8292C10.4385 13.7198 10.5 13.5714 10.5 13.4167C10.4985 12.0248 9.94484 10.6903 8.9606 9.70608C7.97637 8.72185 6.64191 8.16823 5.25 8.16669Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_268_8842">
+                                    <rect width="14" height="14" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                 </svg>
+                              </span>
+                                <span class="btn-text">{{ __('Sign In') }}</span>
+                            </a>
+                            <a class="td-btn gradient-btn btn-sm radius-8" href="{{ route('register') }}">
+                              <span class="btn-icon">
+                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.0001 1H6.50013C6.22363 1 6.00013 1.224 6.00013 1.5C6.00013 1.776 6.22363 2 6.50013 2H11.0001C11.0896 2 11.1761 2.012 11.2591 2.034L1.14663 12.1465C0.951125 12.342 0.951125 12.658 1.14663 12.8535C1.24413 12.951 1.37213 13 1.50013 13C1.62813 13 1.75613 12.951 1.85363 12.8535L11.9661 2.741C11.9881 2.8235 12.0001 2.9105 12.0001 3V7.5C12.0001 7.776 12.2236 8 12.5001 8C12.7766 8 13.0001 7.776 13.0001 7.5V3C13.0001 1.897 12.1031 1 11.0001 1Z" fill="white"/>
+                                 </svg>
+                              </span>
+                                <span class="btn-text">{{ __('Sign Up') }}</span>
+                            </a>
+                                @endauth
+                        </div>
+                        <div class="header-hamburger d-lg-none">
+                            <a class="sidebar-toggle" href="javascript:void(0)">
+                              <span class="menu-icon">
+                                 <span></span>
+                                 <span></span>
+                                 <span></span>
+                              </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header section end -->
+
+ @push('js')
+<script>
+    $('.change_lang').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        $.get(url, function(data) {
+            location.reload();
+        });
+    });
+</script>
+ @endpush

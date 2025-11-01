@@ -1,0 +1,36 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Admin styles
+/*----------------------------------------*/
+
+.admin-item {
+	display: flex;
+	align-items: center;
+
+	.admin-thumbnail {
+		width: 60px;
+		height: 60px;
+		flex: 0 0 60px;
+		overflow: hidden;
+		margin-inline-end: 10px;
+		border-radius: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.admin-name {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 22px;
+		margin-bottom: 5px;
+	}
+
+	.admin-designation {
+		display: block;
+		font-size: 14px;
+		line-height: 19px;
+	}
+}

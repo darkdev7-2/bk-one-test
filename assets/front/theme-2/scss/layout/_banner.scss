@@ -1,0 +1,200 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  banner css
+/*----------------------------------------*/
+.banner-style-two {
+  padding-top: 175px;
+  padding-bottom: 145px;
+  @media #{$lg} {
+    padding-top: 155px;
+  }
+  @media #{$xs,$sm,$md} {
+    padding-top: 155px;
+    padding-bottom: 145px;
+  }
+  .container {
+    max-width: 1745px;
+    padding: 0 100px;
+    @media #{$xs,$sm} {
+      padding: 0 40px;
+    }
+  }
+  .banner-content {
+    max-width: 920px;
+    margin: 0 auto;
+    @media #{$xl} {
+      max-width: 850px;
+    }
+    @media #{$lg,$md,$sm,$md} {
+      max-width: 100%;
+    }
+    .banner-subtitle {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 8px 20px 11px;
+      margin-bottom: 25px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--td-white);
+      @media #{$xs,$sm,$md} {
+        padding: 6px 16px 9px;
+      }
+      @media #{$xxs} {
+        font-size: 14px;
+      }
+    }
+    .banner-title {
+      color: var(--td-white);
+      margin-bottom: 60px;
+      font-size: 70px;
+      line-height: 108.7%;
+      @media #{$x3l} {
+        font-size: 60px;padding: 6px 16px 9px;
+      }
+      @media #{$xxl} {
+        font-size: 55px;
+        margin-bottom: 40px;
+      }
+      @media #{$xl} {
+        font-size: 48px;
+        margin-bottom: 45px;
+      }
+      @media #{$lg} {
+        font-size: 40px;
+        margin-bottom: 35px;
+      }
+      @media #{$md} {
+        font-size: 36px;
+        margin-bottom: 45px;
+        line-height: 1.33;
+      }
+      @media #{$sm} {
+        margin-bottom: 35px;
+        font-size: 36px;
+        line-height: 1.33;
+      }
+      @media #{$xs} {
+        margin-bottom: 35px;
+        font-size: 28px;
+        line-height: 1.33;
+      }
+      @media #{$xxs} {
+        font-size: 24px;
+        line-height: 1.33;
+      }
+      .highlight {
+        color: var(--td-secondary);
+        font-weight: 600;
+      }
+    }
+    .description {
+      color: var(--td-white);
+      line-height: 1.5;
+      font-size: 20px;
+      max-width: 693px;
+      margin-bottom: 35px;
+
+      @media #{$xs,$sm,$md} {
+        font-size: 16px;
+      }
+    }
+    .mark-line-inner {
+      position: relative;
+      .mark-line {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+.banner-list {
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 35px;
+      list-style: none;
+      margin-bottom: 45px;
+      @media #{$xs,$sm,$md} {
+        gap: 10px 26px;
+      }
+      .list-item {
+        display: flex;
+        gap: 10px;
+      }
+      .list-title {
+        color: var(--td-white);
+      }
+    }
+  }
+}
+.banner-illustration {
+  position: relative;
+  .shape-text {
+    position: absolute;
+    top: -2%;
+    inset-inline-start: 25%;
+    background: var(--td-white);
+    max-width: 184px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: 64px;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: card-bounce;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+    h6 {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: var(--td-heading);
+      @media #{$xs} {
+        font-size: 14px;
+      }
+    }
+    @media #{$xs,$sm,$md} {
+      top: 60%;
+      z-index: 9;
+    }
+  }
+  .user-one {
+    max-width: 60px;
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+  }
+  .user-two {
+    max-width: 60px;
+    position: absolute;
+    top: 20%;
+    inset-inline-start: 0;
+  }
+  .card-one {
+    position: absolute;
+    bottom: 40%;
+    inset-inline-start: -60px;
+  }
+  .card-two {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+  }
+  .computer {
+    position: absolute;
+    bottom: 0;
+    inset-inline-start: 0;
+  }
+  .men {
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+  }
+}
+

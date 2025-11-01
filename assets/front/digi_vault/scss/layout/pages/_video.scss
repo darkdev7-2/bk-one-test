@@ -1,0 +1,86 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Video styles
+/*----------------------------------------*/
+
+.video-thumb {
+    height: 616px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px 16px 16px 0;
+    margin-left: -50%;
+    position: relative;
+
+    @media #{$sm} {
+        height: 430px;
+        border-radius: 16px 16px 0px 0px;
+        margin-left: 0;
+    }
+
+    @media #{$xs} {
+        height: 360px;
+        border-radius: 16px 16px 0 0;
+        margin-left: 0;
+    }
+}
+
+.video-contents {
+    background: var(--td-white);
+    padding: 30px;
+    border-radius: 8px;
+    margin-left: -200px;
+    z-index: 99;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        background-image: url(../images/video/video-card-glow.png);
+        border-radius: 0px 8px 0px 0px;
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+
+    @media #{$xs,$sm} {
+        margin-left: 0px;
+    }
+
+    @media #{$xxs} {
+        margin-left: 0px;
+        padding: 20px 20px;
+    }
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.play-video {
+    .play-btn {
+        position: absolute;
+        width: 71.43px;
+        height: 71.1px;
+        background: linear-gradient(94.71deg, #258CF4 5.38%, #F425F4 94.16%);
+        border-radius: 3322.26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: pulse 2s infinite;
+    }
+}

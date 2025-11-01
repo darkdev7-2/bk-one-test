@@ -1,0 +1,140 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* FAQ styles
+/*----------------------------------------*/
+.faq-glows {
+  .glow-one {
+    position: absolute;
+    right: 0;
+    top: -80%;
+    z-index: -1;
+  }
+}
+
+.faq-style-one {
+  .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+
+    @media #{$xxs} {
+      grid-template-columns: 1fr;
+    }
+
+    .accordion-button {
+      padding: 0;
+      font-size: 1.125rem;
+      background: transparent;
+      box-shadow: none;
+      font-weight: 500;
+      line-height: 1.5;
+      align-items: self-start;
+
+      @media #{$xs,$sm,$lg} {
+        font-size: rem(18);
+      }
+
+      @media #{$xxs} {
+        font-size: rem(16);
+      }
+
+      &:not(.collapsed) {
+        border-radius: 0;
+        color: var(--td-heading);
+
+        span {
+          color: var(--td-primary-hover);
+        }
+
+        .accordion-body {
+          background: var(--td-white);
+        }
+      }
+
+      &::after {
+        background-image: none;
+      }
+
+      span {
+        margin-inline-end: 8px;
+        flex: 0 0 auto;
+      }
+    }
+
+    .accordion-body {
+      background: transparent;
+      border-radius: rem(0);
+      padding: 0px;
+      padding-left: 28px;
+
+      .description {
+        font-size: rem(14);
+        line-height: 1.7;
+
+        strong {
+          color: var(--td-heading);
+        }
+      }
+
+      .accordion-body-list {
+        margin-top: rem(14);
+
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: rem(7);
+            }
+          }
+        }
+      }
+    }
+
+    .accordion-item {
+      box-shadow: none;
+      background: var(--td-white);
+      @include border-radius(rem(16));
+      background: transparent;
+      border-color: rgba($white, $alpha: 0.1);
+
+      &:not(:first-of-type) {
+        border-top: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+        border-color: rgba($white, $alpha: 0.1);
+      }
+
+      &:last-of-type {
+        &>.accordion-collapse {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      &:first-of-type {
+        .accordion-button {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+
+    .accordion-header {
+      button {
+        padding: rem(0) rem(0) rem(16);
+        cursor: default;
+      }
+    }
+  }
+}
+
+.faq-thumb {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 45%;
+
+  @media #{$xs,$sm,$md} {
+    position: inherit;
+    width: 100%;
+  }
+}

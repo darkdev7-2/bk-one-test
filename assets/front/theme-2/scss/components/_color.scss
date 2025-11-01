@@ -1,0 +1,44 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  Colors
+/*----------------------------------------*/
+.white-text {
+    color: var(--td-white) !important;
+}
+.black-text {
+    color: var(--td-black);
+}
+.text-primary {
+    color: var(--td-heading);
+}
+.theme-primary {
+    color: var(--td-bg-primary);
+}
+.theme-secondary {
+    color: var(--td-secondary);
+}
+.theme-text-primary {
+    color: var(--td-text-secondary);
+}
+.theme-text-secondary {
+    color: var(--td-text-secondary);
+}
+.theme-text-tertiary {
+    color: var(--td-text-tertiary);
+}
+.warning-text {
+    color: var(--td-warning);
+}
+.success-text {
+    color: var(--td-success);
+}
+.danger-text {
+    color: var(--td-danger);
+}
+.green-text {
+    color: var(--td-green);
+}
+.sugar-milk {
+    color: var(--sugar-milk);
+}

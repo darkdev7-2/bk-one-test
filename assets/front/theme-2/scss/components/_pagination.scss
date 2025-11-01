@@ -1,0 +1,92 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   Basic pagination
+-----------------------------------------*/
+.pagination-wrapper {
+	margin-top: 60px;
+}
+.td-pagination {
+	ul {
+		@include flexbox();
+		align-items: center;
+		gap: 12px 12px;
+		flex-wrap: wrap;
+		@media #{$xs,$sm,$md}{
+			justify-content: start;
+		}
+		li {
+			list-style: none;
+			a {
+				width: 54px;
+				height: 54px;
+				@include inline-flex();
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				inset-inline-end: 0;
+				top: 50%; 
+				font-weight: 500;
+				font-size: 22px;
+				color: var(--td-heading);
+				border: 1px solid var(--td-border-primary);
+				@include border-radius(14px);
+				position: relative;
+				z-index: 1;
+				@media #{$xs,$sm,$md} {
+					font-size: 16px;
+				}
+				@include dark {
+					color: var(--td-white);
+					svg * {
+						fill: var(--td-white);
+					}
+				}
+				&::before {
+					position: absolute;
+					content: "";
+					inset: 0;
+					border-radius: inherit;
+					background: linear-gradient(154.73deg, var(--td-primary) -1.83%, var(--golden-glam) 138.32%);
+					transition: all 0.5s ease;
+					opacity: 0;
+					z-index: -1;
+				}
+				&:hover {
+					color: var(--td-white);
+					box-shadow: 0px 18px 30px -2px rgba(19, 8, 4, 0.11);
+					border-color: transparent;
+					&::before {
+						opacity: 1;
+					}
+				}
+				i {
+					font-weight: 500;
+				}
+				svg {
+					@media #{$xs,$sm,$md} {
+						width: 8px;
+					}
+				}
+			}
+			.current {
+				width: 54px;
+				height: 54px;
+				@include inline-flex();
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				inset-inline-end: 0;
+				top: 50%; 
+				font-weight: 500;
+				font-size: 22px;
+				background: linear-gradient(154.73deg, var(--td-primary) -1.83%, var(--golden-glam) 138.32%);
+				color: var(--td-white);
+				border-color: transparent;
+				@media #{$xs,$sm,$md} {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

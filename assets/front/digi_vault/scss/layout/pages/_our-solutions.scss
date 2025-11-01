@@ -1,0 +1,86 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Our solutions styles
+/*----------------------------------------*/
+
+.our-solutions-glows {
+    .glow-one {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .glow-two {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.our-solutions-item {
+    position: relative;
+    z-index: 2;
+
+    .inner {
+        background-color: var(--td-white);
+        padding: 30px 30px;
+        border: 1px solid rgba(34, 34, 34, 0.1);
+        @include border-radius(16px);
+        @extend %td-transition;
+
+        @media #{$xs,$lg} {
+            padding: 20px 20px;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: auto;
+        bottom: 0;
+        top: -2px;
+        width: 0;
+        height: 10%;
+        background: linear-gradient(94.71deg, #258CF4 5.38%, #F425F4 94.16%);
+        @include border-radius(16px);
+        @extend %td-transition;
+        z-index: -1;
+    }
+
+    &:hover {
+        .inner {
+            border-color: var(--td-white);
+        }
+    }
+
+    &:hover,
+    &.active {
+        .inner {
+            @include box-shadow(0px 15px 40px 0px rgba(1, 11, 60, 0.1));
+        }
+        &::after {
+            left: 0;
+            bottom: auto;
+            width: 100%;
+        }
+    }
+}
+
+.our-solutions-icon {
+    span {
+        margin-bottom: 16px;
+        display: inline-block;
+
+        img {
+            width: 60px;
+        }
+    }
+}
+
+.our-solutions-contents {
+    .title {
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+}

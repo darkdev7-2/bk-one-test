@@ -1,0 +1,20 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* About styles
+/*----------------------------------------*/
+.about-thumb {
+    max-width: 476px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.about-thumb-contents {
+    margin-left: 90px;
+
+    @media #{$xs,$sm,$md} {
+        margin-left: 0;
+    }
+}

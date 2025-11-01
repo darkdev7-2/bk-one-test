@@ -1,0 +1,290 @@
+
+@use '../utils' as *;
+
+/*-----------------------------------------------------------------------------------
+
+  Project Name: Digibank - Advanced Digital Banking System with Rewards
+  Author: Tdevs
+  Support: 
+  Description: Digibank - Advanced Digital Banking System with Rewards
+  Version: 1.0
+  
+-----------------------------------------------------------------------------------
+
+/*----------------------------------------*/
+/*   Globals Default
+/*----------------------------------------*/
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*----------------------------------------
+  Bootstrap customize
+-----------------------------------------*/
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	--bs-gutter-x: 30px;
+}
+@media (min-width: 1601px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1350px;
+	}
+}
+.large-container {
+    max-width: 1530px;
+}
+.row {
+    --bs-gutter-x: 30px;
+}
+.g-0,.gx-0 {
+    --bs-gutter-x: ;
+}
+.g-0,.gy-0 {
+    --bs-gutter-y: 0
+}
+.g-10,
+.gx-10 {
+	--bs-gutter-x: 10px;
+}
+.gy-12 {
+	--bs-gutter-y: 12px;
+}
+.gy-15 {
+	--bs-gutter-y: 15px;
+}
+.gx-15 {
+	--bs-gutter-x: 15px;
+}
+.g-20 {
+	--bs-gutter-x: 20px;
+	--bs-gutter-y: 20px;
+}
+.gy-20 {
+	--bs-gutter-y: 20px;
+}
+.gx-20 {
+	--bs-gutter-x: 20px;
+}
+.gy-20 {
+	--bs-gutter-y: 20px;
+}
+.g-24 {
+	--bs-gutter-x: 24px;
+	--bs-gutter-y: 24px;
+}
+.gy-24 {
+	--bs-gutter-y: 24px;
+}
+.gx-24 {
+	--bs-gutter-x: 24px;
+}
+.gy-24 {
+	--bs-gutter-y: 24px;
+}
+.g-30,
+.gx-30 {
+	--bs-gutter-x: 30px;
+}
+.g-30,
+.gy-30 {
+	--bs-gutter-y: 30px;
+}
+.g-40,
+.gx-40 {
+	--bs-gutter-x: 40px;
+}
+.g-40,
+.gy-40 {
+	--bs-gutter-y: 40px;
+}
+.g-50,
+.gx-50 {
+	--bs-gutter-x: 50px;
+}
+.g-50,
+.gy-50 {
+	--bs-gutter-y: 50px;
+}
+.g-60,
+.gy-60 {
+	--bs-gutter-y: 60px;
+}
+
+.gy-xs-16 {
+	--bs-gutter-y: 15px;
+}
+
+/*----------------------------------------
+  Body Overlay 
+-----------------------------------------*/
+.body-overlay {
+	background-color: $black;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	inset-inline-start: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s 0s ease-out;
+    -moz-transition: all 0.3s 0s ease-out;
+    -ms-transition: all 0.3s 0s ease-out;
+    -o-transition: all 0.3s 0s ease-out;
+    transition: all 0.3s 0s ease-out;
+}
+.body-overlay {
+	background-color: $black;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	inset-inline-start: 0;
+	opacity: 0;
+	visibility: hidden;
+	    -webkit-transition: all 0.3s 0s ease-out;
+    -moz-transition: all 0.3s 0s ease-out;
+    -ms-transition: all 0.3s 0s ease-out;
+    -o-transition: all 0.3s 0s ease-out;
+    transition: all 0.3s 0s ease-out;
+}
+.body-overlay.opened {
+	opacity: 0.7;
+	visibility: visible;
+}
+
+/*----------------------------------------
+  Mfp customize
+-----------------------------------------*/
+.mfp-iframe-holder {
+	.mfp-content {
+		line-height: 0;
+		width: 100%;
+		max-width: 1280px;
+		@media #{$xxl,$x3l} {
+			max-width: 1000px;
+		}
+		@media #{$xl} {
+			max-width: 850px;
+		}
+		@media #{$lg} {
+			max-width: 820px;
+		}
+		@media #{$md} {
+			max-width: 750px;
+		}
+	}
+}
+.mfp-close {
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+	&:hover{
+		color: var(--td-white);;
+	}
+	&::after {
+		position: absolute;
+		content: "\f00d";
+		height: 100%;
+		width: 100%;
+		font-family: var(--td-ff-fontawesome);
+		font-size: 31px;
+		font-weight: 200;
+		inset-inline-end: -20px;
+		margin-top: -25px;
+		@media #{$xs,$sm,$md} {
+			inset-inline-end: 15px;
+			margin-top: -30px;
+		}
+	}
+}
+
+.color-switcher {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	@media #{$xs} {
+		width: 40px;
+		height: 24px;
+	}
+	@media #{$sm,$md,$lg} {
+		width: 50px;
+		height: 30px;
+	}
+	input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+		bottom: 0;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+		background-color: #415C68;
+		border: 1px solid rgba(255, 255, 255, 0.37);
+		&.round {
+			border-radius: 34px;
+			&:before {
+				border-radius: 50%;
+			}
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			inset-inline-start: 4px;
+			bottom: 4px;
+			-webkit-transition: 0.4s;
+			transition: 0.4s;
+			background: linear-gradient(137.02deg, var(--td-primary) 0%, var(--golden-glam) 96.71%);
+			box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+			@media #{$xs} {
+				height: 16px;
+				width: 16px;
+			}
+			@media #{$sm,$md,$lg} {
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+	input {
+		&:checked {
+			& + .slider {
+				background-color: #415C68;
+				&:before {
+					-webkit-transform: translateX(26px);
+					-ms-transform: translateX(26px);
+					transform: translateX(26px);
+					@media #{$sm,$md,$lg} {
+						-webkit-transform: translateX(20px);
+						-ms-transform: translateX(20px);
+						transform: translateX(20px);	
+					}
+					@include rtl {
+						-webkit-transform: translateX(-26px);
+						-ms-transform: translateX(-26px);
+						transform: translateX(-26px);
+					}
+					@media #{$xs} {
+						-webkit-transform: translateX(14px);
+						-ms-transform: translateX(14px);
+						transform: translateX(14px);	
+					}
+				}
+			}
+		}
+	}
+}

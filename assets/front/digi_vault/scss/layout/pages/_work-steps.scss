@@ -1,0 +1,96 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/* Work steps styles
+/*----------------------------------------*/
+
+.td-work-steps-section {
+    background: linear-gradient(94.71deg, rgba(37, 140, 244, 0.04) 5.38%, rgba(244, 37, 244, 0.04) 94.16%);
+    padding: 120px 0 90px;
+}
+
+.work-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 30px;
+    @media #{$xs,$sm} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.work-steps-item {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../images/work-steps/arrow-up.svg);
+        height: 100%;
+        width: 55%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        right: -88px;
+        top: -50px;
+        @media #{$xs} {
+            right: -68px;
+            top: -22px;
+        }
+        @media #{$xxs} {
+            right: -48px;
+        }
+    }
+
+    &:last-child {
+        &::before {
+            display: none;
+        }
+    }
+
+    &:nth-child(2n) {
+        &::before {
+            background-image: url(../images/work-steps/arrow-down.svg);
+            top: 0;
+            @media #{$xs,$sm} {
+                display: none;
+            } 
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        margin-bottom: 50px;
+        @media #{$xs,$sm} {
+            margin-bottom: 25px;
+        }
+
+        span {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(94.71deg, #258CF4 5.38%, #F425F4 94.16%);
+                opacity: .3;
+                border: 1px solid var(--td-white);
+                filter: blur(25px);
+                border-radius: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .contents {
+        .title {
+            font-size: 20px;
+            @media #{$xs} {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* Back to top 
+/*----------------------------------------*/
+.back-to-top-wrap {
+	position: fixed;
+	bottom: 30px;
+	inset-inline-end: 30px;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	@include border-radius(50px);
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	-webkit-transition: all 400ms linear;
+	-o-transition: all 400ms linear;
+	transition: all 400ms linear;
+	background-color: var(--td-primary);;
+	@media #{$xxs} {
+		bottom: 20px;
+		inset-inline-end: 20px;
+	} 
+	&.active-progress {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0px);
+	}
+	&::after {
+		position: absolute;
+		font-family: var(--td-ff-fontawesome);
+		content: "\f062";
+		text-align: center;
+		line-height: 46px;
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--td-white);
+		inset-inline-start: 0;
+		top: 0;
+		height: 46px;
+		width: 46px;
+		cursor: pointer;
+		display: block;
+		z-index: 1;
+		-webkit-transition: all 400ms linear;
+		-o-transition: all 400ms linear;
+		transition: all 400ms linear;
+	}
+	svg {
+		path {
+			fill: none;
+		}
+		&.backtotop-circle {
+			path {
+				stroke: #ccc;
+				stroke-width: 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-transition: all 400ms linear;
+				-o-transition: all 400ms linear;
+				transition: all 400ms linear;
+			}
+		}
+	}
+}

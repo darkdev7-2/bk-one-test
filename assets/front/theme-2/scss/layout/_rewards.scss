@@ -1,0 +1,115 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Rewards css
+/*----------------------------------------*/    
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 45px;
+    @media #{$sm,$md} {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+    @media #{$xs,$sm} {
+        grid-template-columns: 1fr;  
+    }
+}
+.rewards-item {
+    background: var(--td-white);
+    border: 1px solid var(--td-border-primary);
+    border-radius: 20px;
+    padding: 90px 40px 40px;
+    text-align: center;
+    position: relative;
+    margin-top: 60px;
+    @include dark {
+        background: rgba(255, 255, 255, 0.16);
+        border: 1px solid #4F4E4E;
+    }
+    @media #{$xxs,$lg} {
+        padding: 65px 20px 30px;
+    }
+    .icon {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 118px;
+        @media #{$xxs,$lg} {
+            max-width: 98px;
+        }
+    }
+    .contents {
+        .title {
+            font-size: 26px;
+            margin-bottom: 20px;
+            @media #{$lg} {
+                font-size: 22px;
+            }
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+        .description {
+            margin-bottom: 25px;
+        }
+    }
+    .rewards-point {
+        text-align: center;
+        margin-bottom: 20px;
+        span {
+            display: inline-flex;
+            padding: 10px 15px;
+            gap: 10px;
+            height: 44px;
+            background: #FFEEE6;
+            border-radius: 12px;
+            color: var(--td-primary);
+        }
+    }
+}
+
+// Rewards table css
+.reward-table  {
+	table {
+        border-spacing: 0px 20px;
+        border-collapse: separate;
+        margin-bottom: 0;
+        background: var(--td-white);
+        border: 1px solid #D7D7D7;
+        border-radius: 12px;
+        padding: 0 30px;
+		@media #{$xs,$sm} {
+			min-width: 550px;
+		} 
+		thead {
+			tr {
+				th {
+                    font-size: 16px;
+                    border: 0;
+                    background: transparent;
+                    border-bottom: 1px solid var(--td-border-primary);
+                    padding: 0px 20px 20px;
+                    color: var(--td-text-primary);
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+                    font-weight: 700;
+                    color: var(--td-heading);
+                    padding: 0px 20px;
+                    border: 0;
+                    font-size: 16px;
+					&:first-child {
+						border-radius: 6px 0px 0px 6px;
+					}
+					&:last-child {
+						border-radius: 0px 6px 6px 0px;
+					}
+				}
+			}
+		}
+	}
+}
