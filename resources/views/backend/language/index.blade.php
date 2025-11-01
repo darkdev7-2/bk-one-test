@@ -11,6 +11,7 @@
                         <div class="title-content">
                             <h2 class="title">{{ __('Language Settings') }}</h2>
                             <div>
+                                <a href="{{ route('admin.language.auto-translate') }}" class="title-btn me-2"><i data-lucide="languages"></i>{{ __('Auto Translate') }}</a>
                                 <a href="{{ route('admin.language-sync-missing') }}" class="title-btn me-2"><i data-lucide="refresh-ccw"></i>{{ __('Sync Missing Translation Keys') }}</a>
                                 <a href="{{ route('admin.language.create') }}" class="title-btn"><i data-lucide="plus-circle"></i>{{ __('Add New') }}</a>
                             </div>

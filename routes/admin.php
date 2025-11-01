@@ -400,6 +400,9 @@ Route::get('language-app-keyword/{language}', [LanguageController::class, 'langu
 Route::post('language-keyword-update', [LanguageController::class, 'keywordUpdate'])->name('language-keyword-update');
 Route::post('language-app-keyword-update', [LanguageController::class, 'appKeywordUpdate'])->name('language.app-keyword-update');
 Route::get('language-sync-missing', [LanguageController::class, 'syncMissing'])->name('language-sync-missing');
+Route::get('language-auto-translate', [LanguageController::class, 'autoTranslate'])->name('language.auto-translate');
+Route::post('language-translate/{language}', [LanguageController::class, 'translateLanguage'])->name('language.translate');
+Route::post('language-translate-all', [LanguageController::class, 'translateAll'])->name('language.translate-all');
 
 Route::get('email-template', [EmailTemplateController::class, 'index'])->name('email-template');
 Route::get('email-template-edit/{id}', [EmailTemplateController::class, 'edit'])->name('email-template-edit');

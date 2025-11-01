@@ -363,4 +363,107 @@ class LanguageController extends Controller
 
         return redirect()->back();
     }
+
+    /**
+     * Display auto-translation settings and status
+     */
+    public function autoTranslate()
+    {
+        $translationService = app(\App\Services\AutoTranslationService::class);
+
+        $isConfigured = $translationService->isConfigured();
+        $languages = Language::where('locale', '!=', config('auto-translation.source_locale'))->get();
+
+        return view('backend.language.auto-translate', compact('isConfigured', 'languages'));
+    }
+
+    /**
+     * Translate a specific language automatically
+     */
+    public function translateLanguage(Request $request, Language $language)
+    {
+        try {
+            $translationService = app(\App\Services\AutoTranslationService::class);
+
+            if (! $translationService->isConfigured()) {
+                notify()->error(__('Google Translate API is not configured. Please set GOOGLE_TRANSLATE_API_KEY in your .env file.'));
+                return redirect()->back();
+            }
+
+            $force = $request->has('force') && $request->get('force') == '1';
+
+            // Start translation
+            $stats = $translationService->translateLanguage($language->locale, $force);
+
+            notify()->success(__(
+                'Translation completed! Translated: :translated, Skipped: :skipped, Errors: :errors',
+                [
+                    'translated' => $stats['translated'],
+                    'skipped' => $stats['skipped'],
+                    'errors' => $stats['errors'],
+                ]
+            ));
+
+            return redirect()->back();
+        } catch (\Exception $e) {
+            notify()->error(__('Translation failed: :error', ['error' => $e->getMessage()]));
+            return redirect()->back();
+        }
+    }
+
+    /**
+     * Translate all active languages automatically
+     */
+    public function translateAll(Request $request)
+    {
+        try {
+            $translationService = app(\App\Services\AutoTranslationService::class);
+
+            if (! $translationService->isConfigured()) {
+                notify()->error(__('Google Translate API is not configured. Please set GOOGLE_TRANSLATE_API_KEY in your .env file.'));
+                return redirect()->back();
+            }
+
+            $force = $request->has('force') && $request->get('force') == '1';
+
+            $languages = Language::where('status', 1)
+                ->where('locale', '!=', config('auto-translation.source_locale'))
+                ->get();
+
+            if ($languages->isEmpty()) {
+                notify()->warning(__('No active languages found to translate.'));
+                return redirect()->back();
+            }
+
+            $overallStats = [
+                'total' => 0,
+                'translated' => 0,
+                'skipped' => 0,
+                'errors' => 0,
+            ];
+
+            foreach ($languages as $language) {
+                $stats = $translationService->translateLanguage($language->locale, $force);
+                $overallStats['total'] += $stats['total'];
+                $overallStats['translated'] += $stats['translated'];
+                $overallStats['skipped'] += $stats['skipped'];
+                $overallStats['errors'] += $stats['errors'];
+            }
+
+            notify()->success(__(
+                'All languages translated! Total: :total, Translated: :translated, Skipped: :skipped, Errors: :errors',
+                [
+                    'total' => $overallStats['total'],
+                    'translated' => $overallStats['translated'],
+                    'skipped' => $overallStats['skipped'],
+                    'errors' => $overallStats['errors'],
+                ]
+            ));
+
+            return redirect()->back();
+        } catch (\Exception $e) {
+            notify()->error(__('Translation failed: :error', ['error' => $e->getMessage()]));
+            return redirect()->back();
+        }
+    }
 }
